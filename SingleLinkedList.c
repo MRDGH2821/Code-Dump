@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 struct node
 {
@@ -6,7 +7,7 @@ struct node
 	struct node *next;
 };
 
-void insert(struct node* nd,int data)
+void insert(struct node nd,int data)
 {
 	struct Node* new_node = (struct Node*) malloc(sizeof(struct Node));
 	new_node->data=data;
