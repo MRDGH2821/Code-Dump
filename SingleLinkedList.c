@@ -8,5 +8,5 @@ struct node
 
 void insert(struct node* nd,int data)
 {
-
+	struct Node* new_node = (struct Node*) malloc(sizeof(struct Node));
 }
