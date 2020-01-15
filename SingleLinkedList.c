@@ -7,10 +7,10 @@ struct node
 	struct node *next;
 };
 
-void insert(struct node nd,int data)
+void insert(struct node nd,int ndata)
 {
 	struct Node* new_node = (struct Node*) malloc(sizeof(struct Node));
-	new_node->data=data;
+	new_node->data=ndata;
 	nd->next=new_node;
 	new_node->next=NULL;
 };
