@@ -1,0 +1,17 @@
+	Name -- Salas Dongaonkar
+	Division -- B
+	Roll No. -- 16
+	Batch -- B1
+	Algorithm -- To Print The Indian Flag 
+
+Step 1. Start
+Step 2. Initialise canvas
+Step 3. Draw 3 rectangles, r1,r2,r3.
+Step 4. Draw a line, l1.
+Step 5. Draw a circle c1.
+Step 6. Set r1 colour red.
+Step 7. Set r3 colour green.
+Step 8. Set c1 colour blue.
+Step 9. Set l1 colour blue.
+Step 10. Imprint and rotate l1 to get ashoka chakra.
+Step 11. Stop

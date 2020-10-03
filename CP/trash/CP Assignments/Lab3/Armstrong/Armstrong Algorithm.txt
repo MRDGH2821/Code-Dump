@@ -1,0 +1,11 @@
+	Name -- Salas Dongaonkar
+	Division -- B
+	Roll No. -- 16
+	Batch -- B1
+	Algorithm -- To Decide Armstrong Or Not 
+
+Step 1 : Start
+Step 2 : Accept the number from the user
+Step 3 : Seperate each digit from the number and take the sum of cube of all digits
+Step 4 : If the sum of the cubes is same as the number entered then it is an Armstrong number else not
+Step 5 : Stop

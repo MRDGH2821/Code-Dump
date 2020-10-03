@@ -1,0 +1,27 @@
+{
+  "Java": {
+    "beautifiers": [
+      "Pretty Diff"
+    ],
+    "indent_size": 4,
+    "indent_style": "space",
+    "align_assignments": true,
+    "indent_comments": true,
+    "max_preserve_newlines": 1,
+    "multiline_ternary": "never"
+  },
+  "Markdown": {
+    "beautifiers": [
+      "Prettier"
+    ],
+    "pragma_insert": true
+  },
+  "Python": {
+    "beautifiers": [
+      "Black",
+      "YAPF"
+    ],
+    "indent_size": 4,
+    "indent_style": "space"
+  }
+}

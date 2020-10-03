@@ -1,0 +1,24 @@
+
+public interface Animals
+{
+	public void eat();
+	public void sound();
+}
+
+class dog implements Animals
+{
+	public void eat()
+	{
+		System.out.println("Chomp!");
+	}
+	public void sound()
+	{
+		System.out.println("Bark");
+	}
+	public static void main()
+	{
+		Animals a=new be();
+		be.eat();
+		be.sound();
+	}
+}

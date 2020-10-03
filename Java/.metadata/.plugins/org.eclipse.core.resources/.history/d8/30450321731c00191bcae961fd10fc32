@@ -1,0 +1,12 @@
+package day2;
+
+public class secondclass {
+	
+	 public static void main(String[] args)
+	 {
+		 System.out.print("Name- Mihir Rabade"+ " Age-18" + " Address = Pune");
+		 System.out.println("vit pune");
+		 
+	 
+}
+}

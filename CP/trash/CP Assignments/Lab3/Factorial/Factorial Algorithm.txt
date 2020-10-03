@@ -1,0 +1,11 @@
+	Name -- Salas Dongaonkar
+	Division -- B
+	Roll No. -- 16
+	Batch -- B1
+	Algorithm -- To Find Factorial Of Number 
+
+Step 1. Start.
+Step 2. Take input from user.
+Step 3. GO on multiplying the number by smaller numbers than itself till 1.
+Step 4. Print the output. 
+Step 5. Stop.

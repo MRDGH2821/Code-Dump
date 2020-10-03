@@ -1,0 +1,14 @@
+	Name -- Salas Dongaonkar
+	Division -- B
+	Roll No. -- 16
+	Batch -- B1
+	Algorithm -- To Draw A Dotted Square Using Turtle Simulator 
+
+Step 1. Start.
+Step 2. Initialise Turtle graphics.
+Step 3. Move turtle forward by 5 unit.
+Step 4. PenUp then move turtle forward by 5 unit, then PenDown.
+Step 5. Repeat steps 3 & 4 for four times.
+Step 6. Turn turtle by 90 degrees left.
+Step 7. Repeat Steps 3,4,5,6 for four times.
+Step 8. Stop.

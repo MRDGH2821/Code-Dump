@@ -1,0 +1,11 @@
+        Name -- Salas Dongaonkar
+	Division -- B
+	Roll No. -- 16
+	Batch -- B1
+	Algorithm -- To Find Greatest of two numbers
+
+Step 1. Start.
+Step 2. Take the two numbers from user.
+Step 3. Compare the two numbers. 
+Step 4. If first number is greater than second, then print the first number or else print the second number.
+Step 5. Stop.

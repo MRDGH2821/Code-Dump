@@ -1,0 +1,11 @@
+
+
+
+You don't need to go through the file counting lines manually. You can just use .read():
+count = lst.count(who)
+The other problem is that you're calling teams.close() and print(count) outside of the function.
+That means they'll try to execute before you call main, and you're trying to close 'teams' which hasn't been opened or defined yet, so your code doesn't know what to do. The same is with printing count - count hasn't been defined outside of the function, which hasn't been called.
+If you want to use them outside the function, at the end of the function you need to return count
+Also, in your loop, you're executing the statement count += 1 which means count = count + 1, but you haven't told it what count is the first time it runs, so it doesn't know what it should add to one. Fix this by defining count = 0 before the loop inside the function.
+And the reason you have an infinite loop is because your condition will never be satisfied. Your code should never take an hour to execute, like, pretty much never. Don't just leave it running for an hour.
+Here's some alternative code. Make sure you understand the problems though.

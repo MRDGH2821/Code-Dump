@@ -1,0 +1,30 @@
+
+public interface Animals
+{
+	public static void eat() {
+		// TODO Auto-generated method stub
+		
+	}
+	public static void sound() {
+		// TODO Auto-generated method stub
+		
+	}
+}
+
+class dog implements Animals
+{
+	public void eat()
+	{
+		System.out.println("Chomp!");
+	}
+	public void sound()
+	{
+		System.out.println("Bark");
+	}
+	public static void main()
+	{
+		Animals a=new Animals();
+		Animals.eat();
+		Animals.sound();
+	}
+}

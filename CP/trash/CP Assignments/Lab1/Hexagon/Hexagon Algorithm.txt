@@ -1,0 +1,12 @@
+	Name -- Salas Dongaonkar
+	Division -- B
+	Roll No. -- 16
+	Batch -- B1
+	Algorithm -- To Draw A Hexagon Using Turtle Simulator 
+
+Step 1. Start.
+Step 2. Initialise Turtle graphics.
+Step 3. Move turtle forward by 10 unit.
+Step 4. Turn turtle by 60 degrees left.
+Step 5. Repeat steps 3 & 4 for six times.
+Step 6. Stop.

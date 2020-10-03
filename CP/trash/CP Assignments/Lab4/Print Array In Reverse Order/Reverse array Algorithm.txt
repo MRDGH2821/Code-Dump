@@ -1,0 +1,14 @@
+	Name -- Salas Dongaonkar
+	
+        Division -- B
+	
+        Roll No. -- 16
+	
+        Batch -- B1
+	
+        Algorithm -- To print reversed array
+
+Step 1. Start.
+Step 2. Take input from user and store them in an array.
+Step 3. Print the array elements in reverse order.
+Step 4. Stop.

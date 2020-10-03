@@ -1,0 +1,7 @@
+a=str(input("Enter a string:"))
+print("Replacing 'a' by 'b':",a.replace("a","b"))
+print("All Upper case:",a.upper())
+print("All Lower case:",a.lower())
+print("Capatilised words:",a.capitalize())
+print("Swap case:",a.swapcase())
+print("Split:",a.split())

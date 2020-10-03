@@ -1,0 +1,12 @@
+	Name -- Salas Dongaonkar
+	Division -- B
+	Roll No. -- 16
+	Batch -- B1
+	Algorithm -- To Check Even Or Odd 
+
+Step 1. Start
+Step 2. Take input from user.
+Step 3. Divide the number by 2.
+Step 4. If the remainder is 0 then it is even or else odd.
+Step 5. Print the output. 
+Step 6. Stop

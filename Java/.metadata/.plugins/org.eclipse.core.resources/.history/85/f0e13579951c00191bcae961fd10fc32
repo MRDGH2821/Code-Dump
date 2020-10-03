@@ -1,0 +1,19 @@
+package arrays1;
+import java.util.Scanner;
+import java.util.ArrayList;
+public class arrays
+{
+	public static void main(String[] args)
+	{
+		Scanner input=new Scanner(System.in);
+		ArrayList <String> colours=new ArrayList <String> ();
+		colours.add("Red");
+		colours.add("Blue");
+		colours.add("Green");
+		colours.add("Orange");
+		colours.remove("Red");
+		String a=colours.get(2);
+	    System.out.println(a);
+		
+	}
+}

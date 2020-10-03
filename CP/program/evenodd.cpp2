@@ -1,0 +1,21 @@
+#include <simplecpp>
+main_program
+{
+  int a[10], even[10], odd[10], i, j, k;
+  for (i = 0; i <= 9; i++)
+    cin >> a[i];
+  {
+    if (a[i] % 2 == 0)
+      {
+        even[j] = a[i];
+        j++;
+        cout << "the even elements are= " << even[j];
+      }
+    else
+      {
+        odd[k] = a[i];
+        k++;
+        cout << "the odd elements are= " << odd[k];
+      }
+  }
+

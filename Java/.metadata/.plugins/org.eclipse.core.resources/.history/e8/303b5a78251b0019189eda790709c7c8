@@ -1,0 +1,19 @@
+package javaworkshop1;
+
+public class first {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+          System.out.println("Hello.....................");
+	}
+}	
+public class second {
+	public static void main(String[] args)
+	{
+		int a=5;
+		int b=6;
+		System.out.println("Sum =",a+b);
+}
+	
+
+}

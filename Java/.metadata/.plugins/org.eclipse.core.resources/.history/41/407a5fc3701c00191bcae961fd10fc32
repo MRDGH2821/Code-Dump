@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+/**
+ * @author HP
+ *
+ */
+package day2;
+{
+ public static void main(string[] args)
+ {
+	 System.out.println("Name- Mihir Rabade"+ "Age-18" + "Address = Pune");
+
+ }

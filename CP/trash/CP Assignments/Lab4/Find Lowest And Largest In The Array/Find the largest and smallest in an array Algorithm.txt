@@ -1,0 +1,13 @@
+	Name -- Salas Dongaonkar
+	Division -- B
+	Roll No. -- 16
+	Batch -- B1
+	Algorithm -- Find the largest and smallest in an array 
+
+Step 1. Start.
+Step 2. Take user inputs and store them in an array.
+Step 3. Take a variable, and store the value of first element of array in that variable.
+Step 4. Compare that variable with the next array elements.
+Step 5. If the element is greater than value stored in variable, then replace the variable value with that of element; or else keep comparing till the last array element.
+Step 6. Print the variable.
+Step 7. Stop.

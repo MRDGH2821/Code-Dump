@@ -1,0 +1,12 @@
+	Name -- Salas Dongaonkar
+	Division -- B
+	Roll No. -- 16
+	Batch -- B1
+	Program -- To Add Two Arrays Element Wise
+
+Step 1 : Start
+Step 2 : Accept the arrays form the user
+Step 3 : Add the first element of first array with the first element of second array
+Step 4 : Repeat the step 3 for alla elements of the array
+Step 5 : Print the final array
+Step 6 : Stop

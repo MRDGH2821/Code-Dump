@@ -1,0 +1,12 @@
+	Name -- Salas Dongaonkar
+	Division -- B
+	Roll No. -- 16
+	Batch -- B1
+	Algorithm -- To Draw A Circle Using Turtle Simulator 
+
+Step 1. Start.
+Step 2. Initialise Turtle graphics.
+Step 3. Move turtle forward by 1 unit.
+Step 4. Turn turtle by 1 degree left.
+Step 5. Repeat steps 3 & 4, Until the circle gets completed.
+Step 6. Stop.

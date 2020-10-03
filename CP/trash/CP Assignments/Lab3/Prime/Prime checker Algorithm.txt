@@ -1,0 +1,17 @@
+	Name -- Salas Dongaonkar
+	
+        Division -- B
+	
+        Roll No. -- 16
+	
+        Batch -- B1
+	
+        Algorithm -- To Check Prime No. Or Not
+
+Step 1. Start
+Step 2. Take number entered by user.
+Step 3. Divide the entered number by all numbers smaller than entered nummber.
+Step 4. Count the number of perfect factors.
+Step 5. If number of factors are two then the number is prime, else it is not a prime.
+Step 6. Print the output. 
+Step 7. Stop.

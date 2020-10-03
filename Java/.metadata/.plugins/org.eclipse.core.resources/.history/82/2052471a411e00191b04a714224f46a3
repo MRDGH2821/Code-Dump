@@ -1,0 +1,6 @@
+
+public interface Animals implements maincheej
+{
+maincheej m=new maincheej();
+m.main();
+}

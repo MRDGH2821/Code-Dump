@@ -1,0 +1,20 @@
+	Name -- Salas Dongaonkar
+	
+        Division -- B
+	
+        Roll No. -- 16
+	
+        Batch -- B1
+	
+        Algorithm -- To Reverse Four Digit No.
+
+Step 1. Start.
+Step 2. Take 4 digit number as input.
+Step 3. Take the remainder of number when divided by 10.
+Step 4. Store the result as - 
+
+Reversed number = (Reversed number * 10) + remainder.
+
+Step 5. Repeat steps 3 & 4 four times.
+Step 6. Print the reversed number.
+Step 7. Stop.
