@@ -1,25 +1,25 @@
-#Assignment operators
-a=6
-b=7
-c=8
-d=9
+# Assignment operators
+a = 6
+b = 7
+c = 8
+d = 9
 
-#assignment
-e=a+b
+# assignment
+e = a+b
 print(e)
 
 # +=
-c+=d
+c += d
 print(c)
 
 # -+
-a-=b
+a -= b
 print(a)
 
 # **=
-c**=b
+c **= b
 print(c)
 
 # //=
-c//=d
+c //= d
 print(c)

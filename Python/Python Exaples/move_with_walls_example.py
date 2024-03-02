@@ -23,15 +23,17 @@ import pygame
 # -- Global constants
 
 # Colors
-BLACK    = (   0,   0,   0)
-WHITE    = ( 255, 255, 255)
-BLUE     = (   0,   0, 255)
+BLACK = (0,   0,   0)
+WHITE = (255, 255, 255)
+BLUE = (0,   0, 255)
 
 # Screen dimensions
-SCREEN_WIDTH  = 800
+SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
 
 # This class represents the bar at the bottom that the player controls
+
+
 class Player(pygame.sprite.Sprite):
     """ This class represents the bar at the bottom that the player controls. """
 
@@ -53,7 +55,6 @@ class Player(pygame.sprite.Sprite):
         self.change_x = 0
         self.change_y = 0
         self.walls = None
-
 
     def changespeed(self, x, y):
         """ Change the speed of the player. """
@@ -88,8 +89,10 @@ class Player(pygame.sprite.Sprite):
             else:
                 self.rect.top = block.rect.bottom
 
+
 class Wall(pygame.sprite.Sprite):
     """ Wall the player can run into. """
+
     def __init__(self, x, y, width, height):
         """ Constructor for the wall that the player can run into. """
         # Call the parent's constructor

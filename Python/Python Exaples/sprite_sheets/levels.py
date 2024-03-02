@@ -3,6 +3,7 @@ import pygame
 import constants
 import platforms
 
+
 class Level():
     """ This is a generic super-class used to define a level.
         Create a child class for each level with level-specific
@@ -40,7 +41,7 @@ class Level():
         # We don't shift the background as much as the sprites are shifted
         # to give a feeling of depth.
         screen.fill(constants.BLUE)
-        screen.blit(self.background,(self.world_shift // 3,0))
+        screen.blit(self.background, (self.world_shift // 3, 0))
 
         # Draw all the sprite lists that we have
         self.platform_list.draw(screen)
@@ -60,6 +61,8 @@ class Level():
             enemy.rect.x += shift_x
 
 # Create platforms for the level
+
+
 class Level_01(Level):
     """ Definition for level 1. """
 
@@ -74,20 +77,19 @@ class Level_01(Level):
         self.level_limit = -2500
 
         # Array with type of platform, and x, y location of the platform.
-        level = [ [platforms.GRASS_LEFT, 500, 500],
-                  [platforms.GRASS_MIDDLE, 570, 500],
-                  [platforms.GRASS_RIGHT, 640, 500],
-                  [platforms.GRASS_LEFT, 800, 400],
-                  [platforms.GRASS_MIDDLE, 870, 400],
-                  [platforms.GRASS_RIGHT, 940, 400],
-                  [platforms.GRASS_LEFT, 1000, 500],
-                  [platforms.GRASS_MIDDLE, 1070, 500],
-                  [platforms.GRASS_RIGHT, 1140, 500],
-                  [platforms.STONE_PLATFORM_LEFT, 1120, 280],
-                  [platforms.STONE_PLATFORM_MIDDLE, 1190, 280],
-                  [platforms.STONE_PLATFORM_RIGHT, 1260, 280],
-                  ]
-
+        level = [[platforms.GRASS_LEFT, 500, 500],
+                 [platforms.GRASS_MIDDLE, 570, 500],
+                 [platforms.GRASS_RIGHT, 640, 500],
+                 [platforms.GRASS_LEFT, 800, 400],
+                 [platforms.GRASS_MIDDLE, 870, 400],
+                 [platforms.GRASS_RIGHT, 940, 400],
+                 [platforms.GRASS_LEFT, 1000, 500],
+                 [platforms.GRASS_MIDDLE, 1070, 500],
+                 [platforms.GRASS_RIGHT, 1140, 500],
+                 [platforms.STONE_PLATFORM_LEFT, 1120, 280],
+                 [platforms.STONE_PLATFORM_MIDDLE, 1190, 280],
+                 [platforms.STONE_PLATFORM_RIGHT, 1260, 280],
+                 ]
 
         # Go through the array above and add platforms
         for platform in level:
@@ -124,20 +126,19 @@ class Level_02(Level):
         self.level_limit = -1000
 
         # Array with type of platform, and x, y location of the platform.
-        level = [ [platforms.STONE_PLATFORM_LEFT, 500, 550],
-                  [platforms.STONE_PLATFORM_MIDDLE, 570, 550],
-                  [platforms.STONE_PLATFORM_RIGHT, 640, 550],
-                  [platforms.GRASS_LEFT, 800, 400],
-                  [platforms.GRASS_MIDDLE, 870, 400],
-                  [platforms.GRASS_RIGHT, 940, 400],
-                  [platforms.GRASS_LEFT, 1000, 500],
-                  [platforms.GRASS_MIDDLE, 1070, 500],
-                  [platforms.GRASS_RIGHT, 1140, 500],
-                  [platforms.STONE_PLATFORM_LEFT, 1120, 280],
-                  [platforms.STONE_PLATFORM_MIDDLE, 1190, 280],
-                  [platforms.STONE_PLATFORM_RIGHT, 1260, 280],
-                  ]
-
+        level = [[platforms.STONE_PLATFORM_LEFT, 500, 550],
+                 [platforms.STONE_PLATFORM_MIDDLE, 570, 550],
+                 [platforms.STONE_PLATFORM_RIGHT, 640, 550],
+                 [platforms.GRASS_LEFT, 800, 400],
+                 [platforms.GRASS_MIDDLE, 870, 400],
+                 [platforms.GRASS_RIGHT, 940, 400],
+                 [platforms.GRASS_LEFT, 1000, 500],
+                 [platforms.GRASS_MIDDLE, 1070, 500],
+                 [platforms.GRASS_RIGHT, 1140, 500],
+                 [platforms.STONE_PLATFORM_LEFT, 1120, 280],
+                 [platforms.STONE_PLATFORM_MIDDLE, 1190, 280],
+                 [platforms.STONE_PLATFORM_RIGHT, 1260, 280],
+                 ]
 
         # Go through the array above and add platforms
         for platform in level:

@@ -1,16 +1,17 @@
-#empty tuple
-empty=()
+# empty tuple
+empty = ()
 print(empty)
 
-#default tuple
-tp='python','vit'
+# default tuple
+tp = 'python', 'vit'
 print(tp)
 
-#default tuple syntax
-tup=('python','vit')
+# default tuple syntax
+tup = ('python', 'vit')
 print(tup)
 
-#built in fn for tple
+"""
+# built in fn for tple
 all()
 any()
 enumerate()
@@ -19,6 +20,8 @@ max()
 min()
 sorted()
 tuple()
-#tuple methods
+
+# tuple methods
 count()
 index()
+"""

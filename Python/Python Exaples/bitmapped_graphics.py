@@ -44,8 +44,8 @@ while not done:
         if event.type == pygame.QUIT:
             done = True
         elif event.type == pygame.MOUSEBUTTONDOWN:
-            click_sound.play() 
-            
+            click_sound.play()
+
     # Copy image to screen:
     screen.blit(background_image, background_position)
 
@@ -54,13 +54,13 @@ while not done:
     player_position = pygame.mouse.get_pos()
     x = player_position[0]
     y = player_position[1]
-    
+
     # Copy image to screen:
     screen.blit(player_image, [x, y])
-    
+
     pygame.display.flip()
 
     clock.tick(60)
-    
 
-pygame.quit ()
+
+pygame.quit()

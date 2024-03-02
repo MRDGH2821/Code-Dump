@@ -10,9 +10,9 @@
 import pygame
 
 # Define some colors
-BLACK = (   0,   0,   0)
-WHITE = ( 255, 255, 255)
-GREEN = (   0, 255,   0)
+BLACK = (0,   0,   0)
+WHITE = (255, 255, 255)
+GREEN = (0, 255,   0)
 
 pygame.init()
 
@@ -22,7 +22,7 @@ screen = pygame.display.set_mode(size)
 
 pygame.display.set_caption("Game Over Example")
 
-#Loop until the user clicks the close button.
+# Loop until the user clicks the close button.
 done = False
 
 # Used to manage how fast the screen updates
@@ -40,15 +40,15 @@ rect_change_y = 5
 font = pygame.font.Font(None, 36)
 
 # Use this boolean variable to trigger if the game is over.
-game_over = False;
+game_over = False
 
 # -------- Main Program Loop -----------
 while not done:
 
     # --- Event Processing
-    for event in pygame.event.get(): # User did something
-        if event.type == pygame.QUIT: # If user clicked close
-            done = True # Flag that we are done so we exit this loop
+    for event in pygame.event.get():  # User did something
+        if event.type == pygame.QUIT:  # If user clicked close
+            done = True  # Flag that we are done so we exit this loop
 
         # We will use a mouse-click to signify when the game is
         # over. Replace this, and set game_over to true in your
@@ -59,7 +59,7 @@ while not done:
     # --- Game Logic
 
     # Only move and process game logic if the game isn't over.
-    if game_over == False:
+    if game_over is False:
         # Move the rectangle starting point
         rect_x += rect_change_x
         rect_y += rect_change_y
@@ -103,4 +103,3 @@ while not done:
 # Be IDLE friendly. If you forget this line, the program will 'hang'
 # on exit.
 pygame.quit()
-

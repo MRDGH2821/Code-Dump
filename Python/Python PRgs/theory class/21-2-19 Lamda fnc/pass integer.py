@@ -1,2 +1,4 @@
-x=lambda a,b:a+10-b
-print(x(5,2))
+def x(a, b): return a+10-b
+
+
+print(x(5, 2))

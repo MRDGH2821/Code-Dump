@@ -76,7 +76,7 @@ pygame.init()
 WINDOW_SIZE = [700, 500]
 screen = pygame.display.set_mode(WINDOW_SIZE)
 
-#Loop until the user clicks the close button.
+# Loop until the user clicks the close button.
 done = False
 
 # Used to manage how fast the screen updates
@@ -94,9 +94,9 @@ balls.add(ball)
 
 # -------- Main Program Loop -----------
 while not done:
-    for event in pygame.event.get(): # User did something
-        if event.type == pygame.QUIT: # If user clicked close
-            done = True # Flag that we are done so we exit this loop
+    for event in pygame.event.get():  # User did something
+        if event.type == pygame.QUIT:  # If user clicked close
+            done = True  # Flag that we are done so we exit this loop
 
     # Clear the screen
     screen.fill(WHITE)

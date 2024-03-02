@@ -1,3 +1,3 @@
-x=4
-y='put'
+x = 4
+y = 'put'
 print(x+y)

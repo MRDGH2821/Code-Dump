@@ -1,7 +1,8 @@
-def add(m, n) :
-  z = m + n
-      print(z)
+def add(m, n):
+    z = m + n
+    print(z)
 
-      a = 3
-          b = 4
-              add(a, b)
+
+a = 3
+b = 4
+add(a, b)

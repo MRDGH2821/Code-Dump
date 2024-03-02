@@ -1,3 +1,3 @@
-mh='123456789012'
+mh = '123456789012'
 for x in range(12):
- print(mh[x])
+    print(mh[x])

@@ -13,9 +13,9 @@ import random
 import math
 
 # Define some colors
-BLACK    = (   0,   0,   0)
-WHITE    = ( 255, 255, 255)
-RED      = ( 255,   0,   0)
+BLACK = (0,   0,   0)
+WHITE = (255, 255, 255)
+RED = (255,   0,   0)
 
 
 class Block(pygame.sprite.Sprite):
@@ -50,8 +50,10 @@ class Block(pygame.sprite.Sprite):
         # Increase the angle in prep for the next round.
         self.angle += self.speed
 
+
 class Player(pygame.sprite.Sprite):
     """ Class to represent the player. """
+
     def __init__(self, color, width, height):
         """ Create the player image. """
         super().__init__()
@@ -64,6 +66,7 @@ class Player(pygame.sprite.Sprite):
         pos = pygame.mouse.get_pos()
         self.rect.x = pos[0]
         self.rect.y = pos[1]
+
 
 # Initialize Pygame
 pygame.init()
@@ -101,7 +104,7 @@ for i in range(50):
 player = Player(RED, 20, 15)
 all_sprites_list.add(player)
 
-#Loop until the user clicks the close button.
+# Loop until the user clicks the close button.
 done = False
 
 # Used to manage how fast the screen updates
@@ -111,9 +114,9 @@ score = 0
 
 # -------- Main Program Loop -----------
 while not done:
-    for event in pygame.event.get(): # User did something
-        if event.type == pygame.QUIT: # If user clicked close
-            done = True # Flag that we are done so we exit this loop
+    for event in pygame.event.get():  # User did something
+        if event.type == pygame.QUIT:  # If user clicked close
+            done = True  # Flag that we are done so we exit this loop
 
     all_sprites_list.update()
 
@@ -126,7 +129,7 @@ while not done:
     # Check the list of collisions.
     for block in blocks_hit_list:
         score += 1
-        print( score )
+        print(score)
 
     # Draw all the spites
     all_sprites_list.draw(screen)

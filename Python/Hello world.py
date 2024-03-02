@@ -1,2 +1,2 @@
-#python prg
+# python prg
 print("Hello world")

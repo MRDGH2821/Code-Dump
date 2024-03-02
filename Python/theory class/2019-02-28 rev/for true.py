@@ -1,2 +1,2 @@
-for true: 
- print("fd")
+while True:
+    print("fd")

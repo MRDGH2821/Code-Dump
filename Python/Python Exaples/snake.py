@@ -25,10 +25,12 @@ segment_margin = 3
 x_change = segment_width + segment_margin
 y_change = 0
 
+
 class Segment(pygame.sprite.Sprite):
     """ Class to represent one segment of the snake. """
     # -- Methods
     # Constructor function
+
     def __init__(self, x, y):
         # Call the parent's constructor
         super().__init__()
@@ -41,6 +43,7 @@ class Segment(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.x = x
         self.rect.y = y
+
 
 # Call this function so the Pygame library can initialize itself
 pygame.init()
@@ -77,14 +80,14 @@ while not done:
         # segment, plus the margin.
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_LEFT:
-                x_change = (segment_width + segment_margin) *- 1
+                x_change = (segment_width + segment_margin) * - 1
                 y_change = 0
             if event.key == pygame.K_RIGHT:
                 x_change = (segment_width + segment_margin)
                 y_change = 0
             if event.key == pygame.K_UP:
                 x_change = 0
-                y_change = (segment_height + segment_margin) *- 1
+                y_change = (segment_height + segment_margin) * - 1
             if event.key == pygame.K_DOWN:
                 x_change = 0
                 y_change = (segment_height + segment_margin)

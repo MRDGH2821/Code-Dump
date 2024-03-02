@@ -3,7 +3,7 @@ import socket
 
 port = 12345
 host = socket.gethostname()
-#host = '10.1.21.1'
+# host = '10.1.21.1'
 
 message_string = "I've connected!"
 message_data = message_string.encode("utf-8")

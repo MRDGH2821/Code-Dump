@@ -12,12 +12,14 @@ import pygame
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 
+
 class TextPrint(object):
     """
     This is a simple class that will help us print to the screen
     It has nothing to do with the joysticks, just outputting the
     information.
     """
+
     def __init__(self):
         """ Constructor """
         self.reset()
@@ -54,7 +56,7 @@ screen = pygame.display.set_mode(size)
 
 pygame.display.set_caption("My Game")
 
-#Loop until the user clicks the close button.
+# Loop until the user clicks the close button.
 done = False
 
 # Used to manage how fast the screen updates
@@ -69,9 +71,9 @@ textPrint = TextPrint()
 # -------- Main Program Loop -----------
 while not done:
     # EVENT PROCESSING STEP
-    for event in pygame.event.get(): # User did something
-        if event.type == pygame.QUIT: # If user clicked close
-            done = True # Flag that we are done so we exit this loop
+    for event in pygame.event.get():  # User did something
+        if event.type == pygame.QUIT:  # If user clicked close
+            done = True  # Flag that we are done so we exit this loop
 
         # Possible joystick actions: JOYAXISMOTION JOYBALLMOTION JOYBUTTONDOWN
         # JOYBUTTONUP JOYHATMOTION
@@ -79,7 +81,6 @@ while not done:
             print("Joystick button pressed.")
         if event.type == pygame.JOYBUTTONUP:
             print("Joystick button released.")
-
 
     # DRAWING STEP
     # First, clear the screen to white. Don't put other drawing commands
@@ -138,7 +139,6 @@ while not done:
 
         textPrint.unindent()
 
-
     # ALL CODE TO DRAW SHOULD GO ABOVE THIS COMMENT
 
     # Go ahead and update the screen with what we've drawn.
@@ -151,4 +151,3 @@ while not done:
 # If you forget this line, the program will 'hang'
 # on exit if running from IDLE.
 pygame.quit()
-

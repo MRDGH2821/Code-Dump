@@ -23,15 +23,16 @@ import pygame
 # Global constants
 
 # Colors
-BLACK    = (   0,   0,   0)
-WHITE    = ( 255, 255, 255)
-BLUE     = (   0,   0, 255)
-RED      = ( 255,   0,   0)
-GREEN    = (   0, 255,   0)
+BLACK = (0,   0,   0)
+WHITE = (255, 255, 255)
+BLUE = (0,   0, 255)
+RED = (255,   0,   0)
+GREEN = (0, 255,   0)
 
 # Screen dimensions
-SCREEN_WIDTH  = 800
+SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
+
 
 class Player(pygame.sprite.Sprite):
     """ This class represents the bar at the bottom that the player
@@ -61,7 +62,6 @@ class Player(pygame.sprite.Sprite):
         # List of sprites we can bump against
         self.level = None
 
-
     def update(self):
         """ Move the player. """
         # Gravity
@@ -71,7 +71,8 @@ class Player(pygame.sprite.Sprite):
         self.rect.x += self.change_x
 
         # See if we hit anything
-        block_hit_list = pygame.sprite.spritecollide(self, self.level.platform_list, False)
+        block_hit_list = pygame.sprite.spritecollide(
+            self, self.level.platform_list, False)
         for block in block_hit_list:
             # If we are moving right,
             # set our right side to the left side of the item we hit
@@ -85,7 +86,8 @@ class Player(pygame.sprite.Sprite):
         self.rect.y += self.change_y
 
         # Check and see if we hit anything
-        block_hit_list = pygame.sprite.spritecollide(self, self.level.platform_list, False)
+        block_hit_list = pygame.sprite.spritecollide(
+            self, self.level.platform_list, False)
         for block in block_hit_list:
 
             # Reset our position based on the top/bottom of the object.
@@ -116,7 +118,8 @@ class Player(pygame.sprite.Sprite):
         # Move down 2 pixels because it doesn't work well if we only move down 1
         # when working with a platform moving down.
         self.rect.y += 2
-        platform_hit_list = pygame.sprite.spritecollide(self, self.level.platform_list, False)
+        platform_hit_list = pygame.sprite.spritecollide(
+            self, self.level.platform_list, False)
         self.rect.y -= 2
 
         # If it is ok to jump, set our speed upwards
@@ -136,6 +139,7 @@ class Player(pygame.sprite.Sprite):
         """ Called when the user lets off the keyboard. """
         self.change_x = 0
 
+
 class Platform(pygame.sprite.Sprite):
     """ Platform the user can jump on """
 
@@ -149,6 +153,7 @@ class Platform(pygame.sprite.Sprite):
         self.image.fill(GREEN)
 
         self.rect = self.image.get_rect()
+
 
 class Level(object):
     """ This is a generic super-class used to define a level.
@@ -211,6 +216,7 @@ class Level_01(Level):
             block.player = self.player
             self.platform_list.add(block)
 
+
 def main():
     """ Main Program """
     pygame.init()
@@ -226,7 +232,7 @@ def main():
 
     # Create all the levels
     level_list = []
-    level_list.append( Level_01(player) )
+    level_list.append(Level_01(player))
 
     # Set the current level
     current_level_no = 0
@@ -239,7 +245,7 @@ def main():
     player.rect.y = SCREEN_HEIGHT - player.rect.height
     active_sprite_list.add(player)
 
-    #Loop until the user clicks the close button.
+    # Loop until the user clicks the close button.
     done = False
 
     # Used to manage how fast the screen updates
@@ -247,9 +253,9 @@ def main():
 
     # -------- Main Program Loop -----------
     while not done:
-        for event in pygame.event.get(): # User did something
-            if event.type == pygame.QUIT: # If user clicked close
-                done = True # Flag that we are done so we exit this loop
+        for event in pygame.event.get():  # User did something
+            if event.type == pygame.QUIT:  # If user clicked close
+                done = True  # Flag that we are done so we exit this loop
 
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_LEFT:
@@ -294,6 +300,7 @@ def main():
     # Be IDLE friendly. If you forget this line, the program will 'hang'
     # on exit.
     pygame.quit()
+
 
 if __name__ == "__main__":
     main()

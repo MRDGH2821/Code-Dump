@@ -1,63 +1,63 @@
-#Creating Dictonary
-thisdict =	{
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
+# Creating Dictonary
+thisdict = {
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1964
 }
 print(thisdict)
 
-#Accessing Items
+# Accessing Items
 x = thisdict["model"]
 print(x)
 
 x = thisdict.get("model")
 print(x)
 
-#Change Values
+# Change Values
 thisdict["year"] = 2018
 
-#Looping in Dictonary
-#Prints keys
+# Looping in Dictonary
+# Prints keys
 for x in thisdict:
-  print(x)
+    print(x)
 
-#Prints values
+# Prints values
 for x in thisdict:
-  print(thisdict[x])
-  
+    print(thisdict[x])
+
 for x in thisdict.values():
-  print(x)
-  
-#Both keys and values
-for x, y in thisdict.items():
-  print(x, y)
+    print(x)
 
-#Check if Key Exists  
+# Both keys and values
+for x, y in thisdict.items():
+    print(x, y)
+
+# Check if Key Exists
 if "model" in thisdict:
-  print("Yes, 'model' is one of the keys in the thisdict dictionary")
-  
-#Dictonarylength
+    print("Yes, 'model' is one of the keys in the thisdict dictionary")
+
+# Dictonarylength
 print(len(thisdict))
 
-#Adding Items
+# Adding Items
 thisdict["color"] = "red"
 print(thisdict)
 
-#Removing items
-thisdict.pop("model") #removes the item with the specified key
+# Removing items
+thisdict.pop("model")  # removes the item with the specified key
 print(thisdict)
 
-thisdict.popitem() # removes the last inserted item
+thisdict.popitem()  # removes the last inserted item
 print(thisdict)
 
-del thisdict["year"] #removes the item with the specified key
+del thisdict["year"]  # removes the item with the specified key
 print(thisdict)
 
-del thisdict #deletes dict
-#print(thisdict)
+del thisdict  # deletes dict
+# print(thisdict)
 
-#dict() constructor
-thisdict =	dict(brand="Ford", model="Mustang", year=1964)
+# dict() constructor
+thisdict = dict(brand="Ford", model="Mustang", year=1964)
 print(thisdict)
-thisdict.clear() #empties dictionary
+thisdict.clear()  # empties dictionary
 print(thisdict)

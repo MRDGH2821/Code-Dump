@@ -31,6 +31,7 @@ import levels
 
 from player import Player
 
+
 def main():
     """ Main Program """
     pygame.init()
@@ -60,7 +61,7 @@ def main():
     player.rect.y = constants.SCREEN_HEIGHT - player.rect.height
     active_sprite_list.add(player)
 
-    #Loop until the user clicks the close button.
+    # Loop until the user clicks the close button.
     done = False
 
     # Used to manage how fast the screen updates
@@ -68,9 +69,9 @@ def main():
 
     # -------- Main Program Loop -----------
     while not done:
-        for event in pygame.event.get(): # User did something
-            if event.type == pygame.QUIT: # If user clicked close
-                done = True # Flag that we are done so we exit this loop
+        for event in pygame.event.get():  # User did something
+            if event.type == pygame.QUIT:  # If user clicked close
+                done = True  # Flag that we are done so we exit this loop
 
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_LEFT:
@@ -97,7 +98,7 @@ def main():
             diff = player.rect.right - 500
             player.rect.right = 500
             current_level.shift_world(-diff)
- 
+
         # If the player gets near the left side, shift the world right (+x)
         if player.rect.left <= 120:
             diff = 120 - player.rect.left
@@ -128,6 +129,7 @@ def main():
     # Be IDLE friendly. If you forget this line, the program will 'hang'
     # on exit.
     pygame.quit()
+
 
 if __name__ == "__main__":
     main()

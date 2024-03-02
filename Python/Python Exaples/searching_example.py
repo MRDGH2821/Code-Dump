@@ -19,16 +19,16 @@ while i < len(name_list) and name_list[i] != "Morgiana the Shrew":
     i += 1
 
 if i == len(name_list):
-    print( "The name was not in the list." )
+    print("The name was not in the list.")
 else:
-    print( "The name is at position",i)
+    print("The name is at position", i)
 
 # Binary search
-desired_element = "Morgiana the Shrew";
+desired_element = "Morgiana the Shrew"
 lower_bound = 0
 upper_bound = len(name_list)-1
 found = False
-while lower_bound <= upper_bound and found == False:
+while lower_bound <= upper_bound and found is False:
     middle_pos = (lower_bound + upper_bound) // 2
     if name_list[middle_pos] < desired_element:
         lower_bound = middle_pos + 1
@@ -38,7 +38,6 @@ while lower_bound <= upper_bound and found == False:
         found = True
 
 if found:
-    print( "The name is at position", middle_pos)
+    print("The name is at position", middle_pos)
 else:
-    print( "The name was not in the list." )
-
+    print("The name was not in the list.")

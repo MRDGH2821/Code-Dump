@@ -19,12 +19,12 @@ http://programarcadegames.com/python_examples/sprite_sheets/
 """
 import pygame
 
-BLACK  = (   0,   0,   0)
-WHITE  = ( 255, 255, 255)
-BLUE   = (   0,   0, 255)
-GREEN  = (   0, 255,   0)
-RED    = ( 255,   0,   0)
-PURPLE = ( 255,   0, 255)
+BLACK = (0,   0,   0)
+WHITE = (255, 255, 255)
+BLUE = (0,   0, 255)
+GREEN = (0, 255,   0)
+RED = (255,   0,   0)
+PURPLE = (255,   0, 255)
 
 
 class Wall(pygame.sprite.Sprite):
@@ -44,6 +44,7 @@ class Wall(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.y = y
         self.rect.x = x
+
 
 class Player(pygame.sprite.Sprite):
     """ This class represents the bar at the bottom that the player controls """
@@ -102,6 +103,7 @@ class Player(pygame.sprite.Sprite):
             else:
                 self.rect.top = block.rect.bottom
 
+
 class Room(object):
     """ Base class for all rooms. """
 
@@ -114,8 +116,10 @@ class Room(object):
         self.wall_list = pygame.sprite.Group()
         self.enemy_sprites = pygame.sprite.Group()
 
+
 class Room1(Room):
     """This creates all the walls in room 1"""
+
     def __init__(self):
         Room.__init__(self)
         # Make the walls. (x_pos, y_pos, width, height)
@@ -128,15 +132,17 @@ class Room1(Room):
                  [20, 0, 760, 20, WHITE],
                  [20, 580, 760, 20, WHITE],
                  [390, 50, 20, 500, BLUE]
-                ]
+                 ]
 
         # Loop through the list. Create the wall, add it to the list
         for item in walls:
             wall = Wall(item[0], item[1], item[2], item[3], item[4])
             self.wall_list.add(wall)
 
+
 class Room2(Room):
     """This creates all the walls in room 2"""
+
     def __init__(self):
         Room.__init__(self)
 
@@ -148,7 +154,7 @@ class Room2(Room):
                  [20, 580, 760, 20, RED],
                  [190, 50, 20, 500, GREEN],
                  [590, 50, 20, 500, GREEN]
-                ]
+                 ]
 
         for item in walls:
             wall = Wall(item[0], item[1], item[2], item[3], item[4])
@@ -157,6 +163,7 @@ class Room2(Room):
 
 class Room3(Room):
     """This creates all the walls in room 3"""
+
     def __init__(self):
         Room.__init__(self)
 
@@ -166,7 +173,7 @@ class Room3(Room):
                  [780, 350, 20, 250, PURPLE],
                  [20, 0, 760, 20, PURPLE],
                  [20, 580, 760, 20, PURPLE]
-                ]
+                 ]
 
         for item in walls:
             wall = Wall(item[0], item[1], item[2], item[3], item[4])
@@ -180,6 +187,7 @@ class Room3(Room):
         for x in range(150, 700, 100):
             wall = Wall(x, 200, 20, 200, WHITE)
             self.wall_list.add(wall)
+
 
 def main():
     """ Main Program """
@@ -287,6 +295,7 @@ def main():
         clock.tick(60)
 
     pygame.quit()
+
 
 if __name__ == "__main__":
     main()

@@ -6,20 +6,22 @@
 import pygame
 
 # Define some colors
-black    = (   0,   0,   0)
-white    = ( 255, 255, 255)
-blue     = (  50,  50, 255)
-green    = (   0, 255,   0)
-dkgreen  = (   0, 100,   0)
-red      = ( 255,   0,   0)
+black = (0,   0,   0)
+white = (255, 255, 255)
+blue = (50,  50, 255)
+green = (0, 255,   0)
+dkgreen = (0, 100,   0)
+red = (255,   0,   0)
 
-# This class represents the ball        
+# This class represents the ball
 # It derives from the "Sprite" class in Pygame
+
+
 class Ball(pygame.sprite.Sprite):
     # Constructor. Pass in the color of the block, and its x and y position
     def __init__(self):
         # Call the parent class (Sprite) constructor
-        super().__init__() 
+        super().__init__()
 
         # Variables to hold the height and width of the block
         width = 20
@@ -38,24 +40,25 @@ class Ball(pygame.sprite.Sprite):
         # Get the current mouse position. This returns the position
         # as a list of two numbers.
         pos = pygame.mouse.get_pos()
-        
+
         # Fetch the x and y out of the list, just like we'd fetch letters out of a string.
         # NOTE: If you want to keep the mouse at the bottom of the screen, just set y = 380,
         # and not update it with the mouse position stored in pos[1]
-        x=pos[0]
-        y=pos[1]
+        x = pos[0]
+        y = pos[1]
 
         # Set the attribute for the top left corner where this object is located
-        self.rect.x=x
-        self.rect.y=y
+        self.rect.x = x
+        self.rect.y = y
+
 
 pygame.init()
 
 # Set the height and width of the screen
-size = [700,500]
+size = [700, 500]
 screen = pygame.display.set_mode(size)
 
-#Loop until the user clicks the close button.
+# Loop until the user clicks the close button.
 done = False
 
 # Used to manage how fast the screen updates
@@ -72,10 +75,10 @@ ball = Ball()
 balls.add(ball)
 
 # -------- Main Program Loop -----------
-while done == False:
-    for event in pygame.event.get(): # User did something
-        if event.type == pygame.QUIT: # If user clicked close
-            done = True # Flag that we are done so we exit this loop
+while done is False:
+    for event in pygame.event.get():  # User did something
+        if event.type == pygame.QUIT:  # If user clicked close
+            done = True  # Flag that we are done so we exit this loop
 
     # Clear the screen
     screen.fill(white)

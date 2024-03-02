@@ -22,15 +22,16 @@ import pygame
 # Global constants
 
 # Colors
-BLACK    = (   0,   0,   0)
-WHITE    = ( 255, 255, 255)
-BLUE     = (   0,   0, 255)
-RED      = ( 255,   0,   0)
-GREEN    = (   0, 255,   0)
+BLACK = (0,   0,   0)
+WHITE = (255, 255, 255)
+BLUE = (0,   0, 255)
+RED = (255,   0,   0)
+GREEN = (0, 255,   0)
 
 # Screen dimensions
-SCREEN_WIDTH  = 800
+SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
+
 
 class Player(pygame.sprite.Sprite):
     """
@@ -61,7 +62,6 @@ class Player(pygame.sprite.Sprite):
         # List of sprites we can bump against
         self.level = None
 
-
     def update(self):
         """ Move the player. """
         # Gravity
@@ -71,7 +71,8 @@ class Player(pygame.sprite.Sprite):
         self.rect.x += self.change_x
 
         # See if we hit anything
-        block_hit_list = pygame.sprite.spritecollide(self, self.level.platform_list, False)
+        block_hit_list = pygame.sprite.spritecollide(
+            self, self.level.platform_list, False)
         for block in block_hit_list:
             # If we are moving right,
             # set our right side to the left side of the item we hit
@@ -85,7 +86,8 @@ class Player(pygame.sprite.Sprite):
         self.rect.y += self.change_y
 
         # Check and see if we hit anything
-        block_hit_list = pygame.sprite.spritecollide(self, self.level.platform_list, False)
+        block_hit_list = pygame.sprite.spritecollide(
+            self, self.level.platform_list, False)
         for block in block_hit_list:
 
             # Reset our position based on the top/bottom of the object.
@@ -119,7 +121,8 @@ class Player(pygame.sprite.Sprite):
         # Move down 2 pixels because it doesn't work well if we only move down 1
         # when working with a platform moving down.
         self.rect.y += 2
-        platform_hit_list = pygame.sprite.spritecollide(self, self.level.platform_list, False)
+        platform_hit_list = pygame.sprite.spritecollide(
+            self, self.level.platform_list, False)
         self.rect.y -= 2
 
         # If it is ok to jump, set our speed upwards
@@ -138,6 +141,7 @@ class Player(pygame.sprite.Sprite):
     def stop(self):
         """ Called when the user lets off the keyboard. """
         self.change_x = 0
+
 
 class Platform(pygame.sprite.Sprite):
     """ Platform the user can jump on """
@@ -217,6 +221,7 @@ class MovingPlatform(Platform):
         if cur_pos < self.boundary_left or cur_pos > self.boundary_right:
             self.change_x *= -1
 
+
 class Level(object):
     """ This is a generic super-class used to define a level.
         Create a child class for each level with level-specific
@@ -272,6 +277,8 @@ class Level(object):
             enemy.rect.x += shift_x
 
 # Create platforms for the level
+
+
 class Level_01(Level):
     """ Definition for level 1. """
 
@@ -289,7 +296,6 @@ class Level_01(Level):
                  [210, 70, 1000, 500],
                  [210, 70, 1120, 280],
                  ]
-
 
         # Go through the array above and add platforms
         for platform in level:
@@ -330,7 +336,6 @@ class Level_02(Level):
                  [210, 70, 1120, 280],
                  ]
 
-
         # Go through the array above and add platforms
         for platform in level:
             block = Platform(platform[0], platform[1])
@@ -349,6 +354,7 @@ class Level_02(Level):
         block.player = self.player
         block.level = self
         self.platform_list.add(block)
+
 
 def main():
     """ Main Program """
@@ -379,7 +385,7 @@ def main():
     player.rect.y = SCREEN_HEIGHT - player.rect.height
     active_sprite_list.add(player)
 
-    #Loop until the user clicks the close button.
+    # Loop until the user clicks the close button.
     done = False
 
     # Used to manage how fast the screen updates
@@ -387,9 +393,9 @@ def main():
 
     # -------- Main Program Loop -----------
     while not done:
-        for event in pygame.event.get(): # User did something
-            if event.type == pygame.QUIT: # If user clicked close
-                done = True # Flag that we are done so we exit this loop
+        for event in pygame.event.get():  # User did something
+            if event.type == pygame.QUIT:  # If user clicked close
+                done = True  # Flag that we are done so we exit this loop
 
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_LEFT:
@@ -416,13 +422,13 @@ def main():
             diff = player.rect.right - 500
             player.rect.right = 500
             current_level.shift_world(-diff)
- 
+
         # If the player gets near the left side, shift the world right (+x)
         if player.rect.left <= 120:
             diff = 120 - player.rect.left
             player.rect.left = 120
             current_level.shift_world(diff)
-            
+
         # If the player gets to the end of the level, go to the next level
         current_position = player.rect.x + current_level.world_shift
         if current_position < current_level.level_limit:
@@ -451,6 +457,7 @@ def main():
     # Be IDLE friendly. If you forget this line, the program will 'hang'
     # on exit.
     pygame.quit()
+
 
 if __name__ == "__main__":
     main()

@@ -11,14 +11,16 @@ import pygame
 import random
 
 # Define some colors
-BLACK    = (   0,   0,   0)
-WHITE    = ( 255, 255, 255)
-RED      = ( 255,   0,   0)
+BLACK = (0,   0,   0)
+WHITE = (255, 255, 255)
+RED = (255,   0,   0)
 
-# This class represents the ball        
+# This class represents the ball
 # It derives from the "Sprite" class in Pygame
+
+
 class Block(pygame.sprite.Sprite):
-    
+
     # READ BEFORE USING:
     # This constructor lets you use any graphic:
     # my_sprite = Block("any_graphic.png")
@@ -35,9 +37,10 @@ class Block(pygame.sprite.Sprite):
 
         self.rect = self.image.get_rect()
     '''
+
     def __init__(self, filename):
         # Call the parent class (Sprite) constructor
-        super().__init__() 
+        super().__init__()
 
         # Create an image of the block, and fill it with a color.
         # This could also be an image loaded from the disk.
@@ -49,9 +52,10 @@ class Block(pygame.sprite.Sprite):
 
         # Fetch the rectangle object that has the dimensions of the image
         # image.
-        # Update the position of this object by setting the values 
+        # Update the position of this object by setting the values
         # of rect.x and rect.y
         self.rect = self.image.get_rect()
+
 
 # Initialize Pygame
 pygame.init()
@@ -75,16 +79,16 @@ for i in range(50):
     # Set a random location for the block
     block.rect.x = random.randrange(screen_width)
     block.rect.y = random.randrange(screen_height)
-    
+
     # Add the block to the list of objects
     block_list.add(block)
     all_sprites_list.add(block)
-    
+
 # Create a RED player block
 player = Block("ufo.png")
 all_sprites_list.add(player)
 
-#Loop until the user clicks the close button.
+# Loop until the user clicks the close button.
 done = False
 
 # Used to manage how fast the screen updates
@@ -94,9 +98,9 @@ score = 0
 
 # -------- Main Program Loop -----------
 while not done:
-    for event in pygame.event.get(): # User did something
-        if event.type == pygame.QUIT: # If user clicked close
-            done = True # Flag that we are done so we exit this loop
+    for event in pygame.event.get():  # User did something
+        if event.type == pygame.QUIT:  # If user clicked close
+            done = True  # Flag that we are done so we exit this loop
 
     # Clear the screen
     screen.fill(WHITE)
@@ -104,24 +108,24 @@ while not done:
     # Get the current mouse position. This returns the position
     # as a list of two numbers.
     pos = pygame.mouse.get_pos()
-    
-    # Fetch the x and y out of the list, 
-       # just like we'd fetch letters out of a string.
+
+    # Fetch the x and y out of the list,
+    # just like we'd fetch letters out of a string.
     # Set the player object to the mouse location
     player.rect.x = pos[0]
     player.rect.y = pos[1]
-    
+
     # See if the player block has collided with anything.
-    blocks_hit_list = pygame.sprite.spritecollide(player, block_list, True)  
-    
+    blocks_hit_list = pygame.sprite.spritecollide(player, block_list, True)
+
     # Check the list of collisions.
     for block in blocks_hit_list:
         score += 1
-        print( score )
-        
+        print(score)
+
     # Draw all the spites
     all_sprites_list.draw(screen)
-    
+
     # Limit to 60 frames per second
     clock.tick(60)
 

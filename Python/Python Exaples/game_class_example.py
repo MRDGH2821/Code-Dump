@@ -12,7 +12,7 @@ Explanation video: http://youtu.be/O4Y5KrNgP_c
 import pygame
 import random
 
-#--- Global constants ---
+# --- Global constants ---
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 GREEN = (0, 255, 0)
@@ -22,6 +22,7 @@ SCREEN_WIDTH = 700
 SCREEN_HEIGHT = 500
 
 # --- Classes ---
+
 
 class Block(pygame.sprite.Sprite):
     """ This class represents a simple block the player collects. """
@@ -46,8 +47,10 @@ class Block(pygame.sprite.Sprite):
         if self.rect.y > SCREEN_HEIGHT + self.rect.height:
             self.reset_pos()
 
+
 class Player(pygame.sprite.Sprite):
     """ This class represents the player. """
+
     def __init__(self):
         super().__init__()
         self.image = pygame.Surface([20, 20])
@@ -59,6 +62,7 @@ class Player(pygame.sprite.Sprite):
         pos = pygame.mouse.get_pos()
         self.rect.x = pos[0]
         self.rect.y = pos[1]
+
 
 class Game(object):
     """ This class represents an instance of the game. If we need to
@@ -125,7 +129,8 @@ class Game(object):
             self.all_sprites_list.update()
 
             # See if the player block has collided with anything.
-            blocks_hit_list = pygame.sprite.spritecollide(self.player, self.block_list, True)
+            blocks_hit_list = pygame.sprite.spritecollide(
+                self.player, self.block_list, True)
 
             # Check the list of collisions.
             for block in blocks_hit_list:
@@ -141,7 +146,7 @@ class Game(object):
         screen.fill(WHITE)
 
         if self.game_over:
-            #font = pygame.font.Font("Serif", 25)
+            # font = pygame.font.Font("Serif", 25)
             font = pygame.font.SysFont("serif", 25)
             text = font.render("Game Over, click to restart", True, BLACK)
             center_x = (SCREEN_WIDTH // 2) - (text.get_width() // 2)
@@ -189,6 +194,7 @@ def main():
 
     # Close window and exit
     pygame.quit()
+
 
 # Call the main function, start up the game
 if __name__ == "__main__":

@@ -12,10 +12,10 @@
 import pygame
 
 # Define some colors
-BLACK    = (   0,   0,   0)
-WHITE    = ( 255, 255, 255)
-GREEN    = (   0, 255,   0)
-RED      = ( 255,   0,   0)
+BLACK = (0,   0,   0)
+WHITE = (255, 255, 255)
+GREEN = (0, 255,   0)
+RED = (255,   0,   0)
 
 pygame.init()
 
@@ -34,9 +34,9 @@ clock = pygame.time.Clock()
 # -------- Main Program Loop -----------
 while not done:
     # --- Main event loop
-    for event in pygame.event.get(): # User did something
-        if event.type == pygame.QUIT: # If user clicked close
-            done = True # Flag that we are done so we exit this loop
+    for event in pygame.event.get():  # User did something
+        if event.type == pygame.QUIT:  # If user clicked close
+            done = True  # Flag that we are done so we exit this loop
 
     # --- Game logic should go here
 
@@ -56,4 +56,3 @@ while not done:
 # If you forget this line, the program will 'hang'
 # on exit if running from IDLE.
 pygame.quit()
-

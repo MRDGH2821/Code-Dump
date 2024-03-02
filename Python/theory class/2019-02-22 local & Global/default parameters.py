@@ -1,4 +1,6 @@
-def fn(string='lp',n):
- print(string,n)
-v='pn'
-fn(v,3)
+def fn(n, string='lp'):
+    print(string, n)
+
+
+v = 'pn'
+fn(3, v)

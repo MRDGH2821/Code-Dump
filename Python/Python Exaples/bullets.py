@@ -12,15 +12,17 @@ import pygame
 import random
 
 # Define some colors
-BLACK    = (   0,   0,   0)
-WHITE    = ( 255, 255, 255)
-RED      = ( 255,   0,   0)
-BLUE     = (   0,   0, 255)
+BLACK = (0,   0,   0)
+WHITE = (255, 255, 255)
+RED = (255,   0,   0)
+BLUE = (0,   0, 255)
 
 # --- Classes
 
+
 class Block(pygame.sprite.Sprite):
     """ This class represents the block. """
+
     def __init__(self, color):
         # Call the parent class (Sprite) constructor
         super().__init__()
@@ -29,6 +31,7 @@ class Block(pygame.sprite.Sprite):
         self.image.fill(color)
 
         self.rect = self.image.get_rect()
+
 
 class Player(pygame.sprite.Sprite):
     """ This class represents the Player. """
@@ -52,8 +55,10 @@ class Player(pygame.sprite.Sprite):
         # Set the player x position to the mouse x position
         self.rect.x = pos[0]
 
+
 class Bullet(pygame.sprite.Sprite):
     """ This class represents the bullet . """
+
     def __init__(self):
         # Call the parent class (Sprite) constructor
         super().__init__()
@@ -107,7 +112,7 @@ for i in range(50):
 player = Player()
 all_sprites_list.add(player)
 
-#Loop until the user clicks the close button.
+# Loop until the user clicks the close button.
 done = False
 
 # Used to manage how fast the screen updates

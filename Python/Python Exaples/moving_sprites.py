@@ -11,15 +11,17 @@ import pygame
 import random
 
 # Define some colors
-BLACK    = (   0,   0,   0)
-WHITE    = ( 255, 255, 255)
-RED      = ( 255,   0,   0)
+BLACK = (0,   0,   0)
+WHITE = (255, 255, 255)
+RED = (255,   0,   0)
+
 
 class Block(pygame.sprite.Sprite):
     """
     This class represents the ball
     It derives from the "Sprite" class in Pygame
     """
+
     def __init__(self, color, width, height):
         """ Constructor. Pass in the color of the block,
         and its x and y position. """
@@ -54,10 +56,12 @@ class Block(pygame.sprite.Sprite):
         if self.rect.y > 410:
             self.reset_pos()
 
+
 class Player(Block):
     """ The player class derives from Block, but overrides the 'update'
     functionality with new a movement function that will move the block
     with the mouse. """
+
     def update(self):
         # Get the current mouse position. This returns the position
         # as a list of two numbers.
@@ -68,6 +72,7 @@ class Player(Block):
         # Set the player object to the mouse location
         self.rect.x = pos[0]
         self.rect.y = pos[1]
+
 
 # Initialize Pygame
 pygame.init()
@@ -97,12 +102,11 @@ for i in range(50):
     all_sprites_list.add(block)
 
 
-
 # Create a red player block
 player = Player(RED, 20, 15)
 all_sprites_list.add(player)
 
-#Loop until the user clicks the close button.
+# Loop until the user clicks the close button.
 done = False
 
 # Used to manage how fast the screen updates
@@ -112,9 +116,9 @@ score = 0
 
 # -------- Main Program Loop -----------
 while not done:
-    for event in pygame.event.get(): # User did something
-        if event.type == pygame.QUIT: # If user clicked close
-            done = True # Flag that we are done so we exit this loop
+    for event in pygame.event.get():  # User did something
+        if event.type == pygame.QUIT:  # If user clicked close
+            done = True  # Flag that we are done so we exit this loop
 
     # Clear the screen
     screen.fill(WHITE)
@@ -143,4 +147,3 @@ while not done:
     pygame.display.flip()
 
 pygame.quit()
-

@@ -1,9 +1,8 @@
-def factors(n) :
-  for i in range(1, n + 1, 1) :
-    if (n % i == 0)
-      :
-      print(i)
+def factors(n):
+    for i in range(1, n + 1, 1):
+        if n % i == 0:
+            print(i)
 
-      a = int (input("Enter a number ="))
-          factors(a)
 
+a = int(input("Enter a number ="))
+factors(a)

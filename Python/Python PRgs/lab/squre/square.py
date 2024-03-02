@@ -1,2 +1,2 @@
-a=int(input("Enter a no."))
-print("Square = ",a**2)
+a = int(input("Enter a no."))
+print("Square = ", a**2)

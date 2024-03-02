@@ -1,2 +1,2 @@
-x='awesome'
-print('Python is ' +x)
+x = 'awesome'
+print('Python is ' + x)

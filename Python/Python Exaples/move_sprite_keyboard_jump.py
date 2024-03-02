@@ -10,6 +10,7 @@ import pygame
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 
+
 class Player(pygame.sprite.Sprite):
     """ The class is the player-controlled sprite. """
 

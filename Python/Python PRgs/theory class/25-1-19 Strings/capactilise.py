@@ -1,3 +1,2 @@
-import string
-str="there is something"
+str = "there is something"
 print(str.capitalize())

@@ -7,6 +7,7 @@ http://programarcadegames.com/
 http://simpson.edu/computer-science/
 """
 
+
 def get_high_score():
     # Default high score
     high_score = 0
@@ -26,6 +27,7 @@ def get_high_score():
 
     return high_score
 
+
 def save_high_score(new_high_score):
     try:
         # Write the file to disk
@@ -35,12 +37,13 @@ def save_high_score(new_high_score):
     except IOError:
         # Hm, can't write it.
         print("Unable to save the high score.")
-    
+
+
 def main():
     """ Main program is here. """
     # Get the high score
     high_score = get_high_score()
-    
+
     # Get the score from the current game
     current_score = 0
     try:
@@ -57,6 +60,7 @@ def main():
         save_high_score(current_score)
     else:
         print("Better luck next time.")
+
 
 # Call the main function, start up the game
 if __name__ == "__main__":

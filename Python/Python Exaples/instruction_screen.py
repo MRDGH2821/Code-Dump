@@ -23,7 +23,7 @@ screen = pygame.display.set_mode(size)
 
 pygame.display.set_caption("Instruction Screen")
 
-#Loop until the user clicks the close button.
+# Loop until the user clicks the close button.
 done = False
 
 # Used to manage how fast the screen updates
@@ -45,9 +45,9 @@ instruction_page = 1
 
 # -------- Instruction Page Loop -----------
 while not done and display_instructions:
-    for event in pygame.event.get(): # User did something
-        if event.type == pygame.QUIT: # If user clicked close
-            done = True # Flag that we are done so we exit this loop
+    for event in pygame.event.get():  # User did something
+        if event.type == pygame.QUIT:  # If user clicked close
+            done = True  # Flag that we are done so we exit this loop
         if event.type == pygame.MOUSEBUTTONDOWN:
             instruction_page += 1
             if instruction_page == 3:
@@ -83,9 +83,9 @@ while not done and display_instructions:
 
 # -------- Main Program Loop -----------
 while not done:
-    for event in pygame.event.get(): # User did something
-        if event.type == pygame.QUIT: # If user clicked close
-            done = True # Flag that we are done so we exit this loop
+    for event in pygame.event.get():  # User did something
+        if event.type == pygame.QUIT:  # If user clicked close
+            done = True  # Flag that we are done so we exit this loop
 
     # Set the screen background
     screen.fill(BLACK)
@@ -112,4 +112,3 @@ while not done:
 # Be IDLE friendly. If you forget this line, the program will 'hang'
 # on exit.
 pygame.quit()
-

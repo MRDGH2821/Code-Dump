@@ -28,25 +28,25 @@ if a >= b:
 # if you are assigning a value.
 if a == b:
     print("a is equal to b")
-   
-# Not equal 
+
+# Not equal
 if a != b:
-  print("a and b are not equal")
-    
+    print("a and b are not equal")
+
 # And
 if a < b and a < c:
     print("a is less than b and c")
- 
-# Non-exclusive or   
+
+# Non-exclusive or
 if a < b or a < c:
     print("a is less than either a or b (or both)")
 
-    
+
 # Boolean data type. This is legal!
 a = True
 if a:
     print("a is true")
-    
+
 if not a:
     print("a is false")
 
@@ -55,7 +55,7 @@ b = False
 
 if a and b:
     print("a and b are both true")
-    
+
 a = 3
 b = 3
 c = a == b
@@ -71,15 +71,15 @@ if "A":
 # This will not trigger as true because it is zero.
 if 0:
     print("Zero")
-    
+
 # Comparing variables to multiple values.
-# The first if statement appears to work, but it will always 
+# The first if statement appears to work, but it will always
 # trigger as true even if the variable a is not equal to b.
 # This is because "b" by itself is considered true.
 a = "c"
 if a == "B" or "b":
     print("a is equal to b. Maybe.")
-    
+
 # This is the proper way to do the if statement.
 if a == "B" or a == "b":
     print("a is equal to b.")
@@ -98,7 +98,7 @@ else:
     print("It is not hot outside")
 print("Done")
 
-#Example 3: Else if statement
+# Example 3: Else if statement
 temperature = int(input("What is the temperature in Fahrenheit? "))
 if temperature > 90:
     print("It is hot outside")
@@ -129,4 +129,4 @@ userName = input("What is your name? ")
 if userName == "Paul":
     print("You have a nice name.")
 else:
-    print("Your name is ok.") 
+    print("Your name is ok.")

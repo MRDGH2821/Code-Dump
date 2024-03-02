@@ -1,5 +1,4 @@
 import socket
-import time
 
 host = ''
 port = 12345
@@ -19,4 +18,4 @@ while True:
         print(data_string)
         conn.close()
 
-print("End Listening")
+    print("End Listening")

@@ -7,19 +7,21 @@ import pygame
 import random
 
 # Define some colors
-BLACK    = (   0,   0,   0)
-WHITE    = ( 255, 255, 255)
-RED      = ( 255,   0,   0)
+BLACK = (0,   0,   0)
+WHITE = (255, 255, 255)
+RED = (255,   0,   0)
 
-# This class represents the ball        
+# This class represents the ball
 # It derives from the "Sprite" class in Pygame
+
+
 class Block(pygame.sprite.Sprite):
-    
-    # Constructor. Pass in the color of the block, 
+
+    # Constructor. Pass in the color of the block,
     # and its x and y position
     def __init__(self, color, width, height):
         # Call the parent class (Sprite) constructor
-        super().__init__() 
+        super().__init__()
 
         # Create an image of the block, and fill it with a color.
         # This could also be an image loaded from the disk.
@@ -28,9 +30,10 @@ class Block(pygame.sprite.Sprite):
 
         # Fetch the rectangle object that has the dimensions of the image
         # image.
-        # Update the position of this object by setting the values 
+        # Update the position of this object by setting the values
         # of rect.x and rect.y
         self.rect = self.image.get_rect()
+
 
 # Initialize Pygame
 pygame.init()
@@ -54,7 +57,7 @@ for i in range(10):
     # Set a random location for the block
     block.rect.x = random.randrange(SCREEN_WIDTH)
     block.rect.y = random.randrange(SCREEN_HEIGHT)
-    
+
     # Add the block to the list of objects
     block_list.add(block)
     all_sprites_list.add(block)
@@ -63,7 +66,7 @@ for i in range(10):
 player = Block(RED, 20, 15)
 all_sprites_list.add(player)
 
-#Loop until the user clicks the close button.
+# Loop until the user clicks the close button.
 done = False
 
 # Used to manage how fast the screen updates
@@ -81,32 +84,32 @@ level = 1
 # -------- Main Program Loop -----------
 while not done:
     # ALL EVENT PROCESSING SHOULD GO BELOW THIS COMMENT
-    
-    for event in pygame.event.get(): # User did something
-        if event.type == pygame.QUIT: # If user clicked close
-            done = True # Flag that we are done so we exit this loop
+
+    for event in pygame.event.get():  # User did something
+        if event.type == pygame.QUIT:  # If user clicked close
+            done = True  # Flag that we are done so we exit this loop
 
     # Get the current mouse position. This returns the position
     # as a list of two numbers.
     pos = pygame.mouse.get_pos()
-    
+
     # ALL EVENT PROCESSING SHOULD GO ABOVE THIS COMMENT
 
     # ALL GAME LOGIC SHOULD GO BELOW THIS COMMENT
-    
-    # Fetch the x and y out of the list, 
+
+    # Fetch the x and y out of the list,
     # just like we'd fetch letters out of a string.
     # Set the player object to the mouse location
     player.rect.x = pos[0]
     player.rect.y = pos[1]
-    
+
     # See if the player block has collided with anything.
-    blocks_hit_list = pygame.sprite.spritecollide(player, block_list, True)  
-    
+    blocks_hit_list = pygame.sprite.spritecollide(player, block_list, True)
+
     # Check the list of collisions.
     for block in blocks_hit_list:
         score += 1
-        print( score )
+        print(score)
 
     # Check to see if all the blocks are gone.
     # If they are, level up.
@@ -124,29 +127,29 @@ while not done:
             # Set a random location for the block
             block.rect.x = random.randrange(SCREEN_WIDTH)
             block.rect.y = random.randrange(SCREEN_HEIGHT)
-            
+
             # Add the block to the list of objects
             block_list.add(block)
             all_sprites_list.add(block)
 
     # ALL GAME LOGIC SHOULD GO ABOVE THIS COMMENT
 
-    # ALL CODE TO DRAW SHOULD GO BELOW THIS COMMENT    
+    # ALL CODE TO DRAW SHOULD GO BELOW THIS COMMENT
 
     # Clear the screen
     screen.fill(WHITE)
 
     # Draw all the spites
     all_sprites_list.draw(screen)
-    
+
     text = font.render("Score: "+str(score), True, BLACK)
     screen.blit(text, [10, 10])
-        
+
     text = font.render("Level: "+str(level), True, BLACK)
     screen.blit(text, [10, 40])
-    
+
     # ALL CODE TO DRAW SHOULD GO ABOVE THIS COMMENT
-    
+
     # Go ahead and update the screen with what we've drawn.
     pygame.display.flip()
 

@@ -12,9 +12,10 @@ import pygame
 import random
 
 # Define some colors
-BLACK = (  0,   0,   0)
+BLACK = (0,   0,   0)
 WHITE = (255, 255, 255)
-RED   = (255,   0,   0)
+RED = (255,   0,   0)
+
 
 class Block(pygame.sprite.Sprite):
     """
@@ -40,6 +41,7 @@ class Block(pygame.sprite.Sprite):
         # of rect.x and rect.y
         self.rect = self.image.get_rect()
 
+
 # Initialize Pygame
 pygame.init()
 
@@ -52,7 +54,7 @@ screen = pygame.display.set_mode([screen_width, screen_height])
 # added to this list. The list is managed by a class called 'Group.'
 block_list = pygame.sprite.Group()
 
-# This is a list of every sprite. 
+# This is a list of every sprite.
 # All blocks and the player block as well.
 all_sprites_list = pygame.sprite.Group()
 
@@ -82,9 +84,9 @@ score = 0
 
 # -------- Main Program Loop -----------
 while not done:
-    for event in pygame.event.get(): 
-        if event.type == pygame.QUIT: 
-            done = True 
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            done = True
 
     # Clear the screen
     screen.fill(WHITE)
@@ -94,7 +96,7 @@ while not done:
     pos = pygame.mouse.get_pos()
 
     # Fetch the x and y out of the list,
-       # just like we'd fetch letters out of a string.
+    # just like we'd fetch letters out of a string.
     # Set the player object to the mouse location
     player.rect.x = pos[0]
     player.rect.y = pos[1]

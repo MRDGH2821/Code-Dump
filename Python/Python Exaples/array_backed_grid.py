@@ -11,13 +11,13 @@
 import pygame
 
 # Define some colors
-BLACK    = (   0,   0,   0)
-WHITE    = ( 255, 255, 255)
-GREEN    = (   0, 255,   0)
-RED      = ( 255,   0,   0)
+BLACK = (0,   0,   0)
+WHITE = (255, 255, 255)
+GREEN = (0, 255,   0)
+RED = (255,   0,   0)
 
 # This sets the width and height of each grid location
-width  = 20
+width = 20
 height = 20
 
 # This sets the margin between each cell
@@ -31,7 +31,7 @@ for row in range(10):
     # in this row
     grid.append([])
     for column in range(10):
-        grid[row].append(0) # Append a cell
+        grid[row].append(0)  # Append a cell
 
 # Set row 1, cell 5 to one. (Remember rows and
 # column numbers start at zero.)
@@ -47,17 +47,17 @@ screen = pygame.display.set_mode(size)
 # Set title of screen
 pygame.display.set_caption("Array Backed Grid")
 
-#Loop until the user clicks the close button.
+# Loop until the user clicks the close button.
 done = False
 
 # Used to manage how fast the screen updates
 clock = pygame.time.Clock()
 
 # -------- Main Program Loop -----------
-while done == False:
-    for event in pygame.event.get(): # User did something
-        if event.type == pygame.QUIT: # If user clicked close
-            done = True # Flag that we are done so we exit this loop
+while done is False:
+    for event in pygame.event.get():  # User did something
+        if event.type == pygame.QUIT:  # If user clicked close
+            done = True  # Flag that we are done so we exit this loop
         elif event.type == pygame.MOUSEBUTTONDOWN:
             # User clicks the mouse. Get the position
             pos = pygame.mouse.get_pos()
@@ -93,4 +93,3 @@ while done == False:
 # Be IDLE friendly. If you forget this line, the program will 'hang'
 # on exit.
 pygame.quit()
-

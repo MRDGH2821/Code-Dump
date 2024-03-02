@@ -1,2 +1,2 @@
-str="there is something"
-print(str.count('is',1,15))
+str = "there is something"
+print(str.count('is', 1, 15))

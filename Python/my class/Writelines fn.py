@@ -1,3 +1,3 @@
-g=open("temp.txt",'w')
-l=['df\n','dfs\n','AWE\n','SFV\n','SFFX\n']
-g.writelines(l)
+temp_file = open("temp.txt", 'w')
+data = ['df\n', 'dfs\n', 'AWE\n', 'SFV\n', 'SFFX\n']
+temp_file.writelines(data)

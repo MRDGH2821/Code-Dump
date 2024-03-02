@@ -10,6 +10,7 @@ import pygame
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 
+
 class Player(pygame.sprite.Sprite):
     """ The class is the player-controlled sprite. """
 
@@ -33,12 +34,10 @@ class Player(pygame.sprite.Sprite):
         self.change_x = 0
         self.change_y = 0
 
-
     def changespeed(self, x, y):
         """ Change the speed of the player"""
         self.change_x += x
         self.change_y += y
-
 
     def update(self):
         """ Find a new position for the player"""
