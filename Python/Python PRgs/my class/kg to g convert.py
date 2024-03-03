@@ -6,7 +6,7 @@ if fh == 1:
     print(kg, "kg =", g, "grams")
 elif fh == 2:
     g = int(input("Enter weight in grams "))
-    kg = g / 1000
+    kg = g // 1000
     print(g, "g =", kg, "KG")
 else:
     print("Invalid choice")

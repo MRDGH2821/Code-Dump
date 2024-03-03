@@ -8,6 +8,10 @@ smartphones = dict(
     phone3='Micromax Canvas 2+',
     phone4='Micromax Yu Yuphoria',
     phone5='OnePlus 6')
-# looping through dictonary
+# looping through dictionary
 for x in smartphones:
-    print(smartphones[x])  # printing values in the dictonary
+    print(smartphones[x])  # printing values in the dictionary
+smart = {}
+for x in range(3):
+    smart[x] = input()
+print(smart)
