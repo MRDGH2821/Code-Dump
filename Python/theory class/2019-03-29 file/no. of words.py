@@ -1,5 +1,4 @@
 print(open('text.txt', 'r').read().count(input("Enter Word to be found: ")))
-
 # Version 2
 file = open('text.txt', 'r')
 lines = file.readlines()
@@ -10,13 +9,11 @@ for x in lines:
     if word in split_words:
         word_count += 1
 print(word_count)
-
 # Solution for version 2
 '''
 l=[]
 for x in g:
  for f in x:
   l.append(f)
-
 print(ct)
 '''

@@ -1,14 +1,13 @@
 # C div Roll no 42
 st = str(input("Enter a string:"))
-
 # Method 1
 
 
 def palin(st):
-    le = int(len(st)/2)
+    le = int(len(st) / 2)
     flag = 0
-    for x in range(le+1):
-        if st[x] == st[-1-x]:
+    for x in range(le + 1):
+        if st[x] == st[-1 - x]:
             flag = 1
         else:
             flag = 0
@@ -20,7 +19,6 @@ def palin(st):
 
 
 palin(st)
-
 # Method 2
 txt = st[::-1]
 if txt == st:

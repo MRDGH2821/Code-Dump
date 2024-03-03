@@ -1,5 +1,4 @@
 # longest word in file
-
 fi = open('text.txt', 'r')
 g = fi.read().split()
 maxL = 0

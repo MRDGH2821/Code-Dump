@@ -1,7 +1,5 @@
 # Division:C  Roll no.:42
-
 # Even Odd seperator
-
 from random import randint
 even = []  # Stores even no.
 odd = []  # Stores odd no.
@@ -13,7 +11,6 @@ for x in l:  # looping through lisy
         even.append(x)  # appending even no.
     else:
         odd.append(x)  # appending odd no.
-
 # Printing the lists
 print("Even list:", even)
 print("Odd list:", odd)

@@ -1,7 +1,6 @@
 #! /bin/python3
 # from copy import deepcopy as dpcpy
 import os
-
 # Complete the biggerIsGreater function below.
 
 

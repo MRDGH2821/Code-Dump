@@ -1,13 +1,11 @@
 import os
 from time import sleep
-
 # Initialising variables
 name = ''
 m1 = 0
 m2 = 0
 m3 = 0
 rlno = 0
-
 try:
     filetest = open("student.txt", 'r')
 except FileNotFoundError:
@@ -31,7 +29,9 @@ def takedata():
 
 def writedata():
     '''Writes Data into file'''
-    f = open("student.txt", 'a+')  # opening file in append as well as write mode.
+    f = open(
+        "student.txt",
+        'a+')  # opening file in append as well as write mode.
     f.write('\n')  # A precautionary new line
     lt = takedata()  # calling takedata function
     for v in lt:  # writing data to file
@@ -55,7 +55,8 @@ def readall():
                 c1[0], c1[1], c1[2], c1[3], c1[4]))
         except Exception:  # this statement does nothing special.It was used to hide when an exception occurs
             pass
-        # This exception was to hide the error which comes up due to empty line inside the file.
+        # This exception was to hide the error which comes up due to empty line
+        # inside the file.
         except IndexError:
             continue
     j.close()  # closing file
@@ -79,11 +80,17 @@ def readspecific():
             if rollno == i[0]:  # Condition to find roll number
                 # per =(i[1]+i[2]+i[3])/3
                 # Formatting output
-                print('{}\n{}\n{}\n{}\n{}'.format(
-                    'Rollno:' + i[0], 'Name:' + i[1], 'Sub1:' + i[2], 'Sub2:' + i[3], 'Sub3:' + i[4]))
+                print(
+                    '{}\n{}\n{}\n{}\n{}'.format(
+                        'Rollno:' + i[0],
+                        'Name:' + i[1],
+                        'Sub1:' + i[2],
+                        'Sub2:' + i[3],
+                        'Sub3:' + i[4]))
                 flag = 1  # flagging as data found
         except IndexError:
-            # This error comes when a list of empty line is accessed using index slicing. Empty line create empty list
+            # This error comes when a list of empty line is accessed using
+            # index slicing. Empty line create empty list
             continue  # this error is hidden using continue statement.
         if flag == 0:
             print("Rollno not found")
@@ -114,21 +121,19 @@ def deletedata():
             else:
                 raise LookupError  # Raise LookupError because data wasn't found
         except IndexError:
-            # This error comes when a list of empty line is accessed using index slicing. Empty line create empty list
+            # This error comes when a list of empty line is accessed using
+            # index slicing. Empty line create empty list
             continue  # this error is hidden using continue statement.
         except LookupError:
             flag = 0  # flagging as data not found
-
         # Flag checker to check if data deleted or not
     if flag == 0:
         print("Record not found")
     elif flag == 1:
         print("Record Deleted")
-
         # closing files
     l1.close()
     l2.close()
-
     os.remove('student.txt')  # deleting the old file
     # renaming temp file to original file name
     os.rename('temp.txt', 'student.txt')
@@ -142,11 +147,9 @@ def backup():
     g = open('student bkp.txt', 'w')  # Opening backup file
     # Copying contents of original file into backup file
     g.writelines(f.readlines())
-
     # closing files
     f.close()
     g.close()
-
     print("Backup Completed!")
     sleep(2)  # delays execution for 2 seconds
 
@@ -181,19 +184,21 @@ def menu():
         elif m == 4:
             deletedata()
         else:
-            # Raises ValueError as the input received is not from [-1,0,1,2,3,4]
+            # Raises ValueError as the input received is not from
+            # [-1,0,1,2,3,4]
             raise ValueError
-
     except ValueError:
         print("Invalid choice")
-
     except SystemExit:
         print('Program Closed')
 
 
 # Intro Screen
-print("\n{:^50}\n\n\n{:^50}\n\n{:^50}".format('Student Records',
-      'Project made by: Aniruddha Bhatt ', 'College: Vishwakarma Institutes of Technology'))
+print(
+    "\n{:^50}\n\n\n{:^50}\n\n{:^50}".format(
+        'Student Records',
+        'Project made by: Aniruddha Bhatt ',
+        'College: Vishwakarma Institutes of Technology'))
 sleep(3)
 print('\n\n\n')
 menu()

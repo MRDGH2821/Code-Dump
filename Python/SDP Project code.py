@@ -5,20 +5,17 @@ import openpyxl
 def account():
     print("###### WELCOME TO BAJRANGDAS CENTRAL LIBRARY ######")
     r = input("\nDo you have an existing account?(y/n)\n")
-    loc = "C:\SDP Project\Details.xlsx"
-
+    loc = "C:\\SDP Project\\Details.xlsx"
     wb = xlrd.open_workbook(loc)
     sheet = wb.sheet_by_index(0)
     sheet.cell_value(0, 0)
-    loc2 = "C:\SDP Project\Books.xlsx"
+    loc2 = "C:\\SDP Project\\Books.xlsx"
     wb2 = xlrd.open_workbook(loc2)
     sheet2 = wb2.sheet_by_index(0)
     sheet2.cell_value(0, 0)
     xfile = openpyxl.load_workbook('Details.xlsx')
-
     sheetd = xfile.active
     n = sheetd.max_row
-
     flag = 0
     if r == 'y' or r == 'Y':
         user = input(
@@ -26,12 +23,13 @@ def account():
         passw = input(
             "Enter Your Password")
         for i in range(sheet.nrows):
-            if sheet.cell_value(i, 2) == user and sheet.cell_value(i, 3) == passw:
+            if sheet.cell_value(
+                    i, 2) == user and sheet.cell_value(
+                    i, 3) == passw:
                 '''Comment the next 2 lines and add function call when the function issue() is created '''
                 # for k in range(sheet2.nrows):
                 #         print (sheet2.cell_value(k, 0),"  ",sheet2.cell_value(k, 1))
                 issue(user)
-
                 flag = 1
             if (flag == 0):
                 print("INCORRECT USERNAME OR PASSWORD")
@@ -43,7 +41,9 @@ def account():
                 user = input("Enter Your Username")
                 passw = input("Enter Your Password")
                 for i in range(sheet.nrows):
-                    if sheet.cell_value(i, 2) == user or sheet.cell_value(i, 1) == gr:
+                    if sheet.cell_value(
+                            i, 2) == user or sheet.cell_value(
+                            i, 1) == gr:
                         print(
                             "USERNAME ALREADY TAKEN  or Duplicate GR Number\nTRY AGAIN")
                         f = 0
@@ -60,18 +60,17 @@ def account():
                         c4.value = passw
                         xfile.save(loc)
                         '''Comment the next 2 lines and add function call when the function issue() is created '''
-
                 # for k in range(sheet2.nrows):
                 #          print (sheet2.cell_value(k, 0), "  ", sheet2.cell_value(k, 1))
         issue(user)
 
 
 def issue(usern):
-    loc2 = "C:\SDP Project\Books.xlsx"
+    loc2 = "C:\\SDP Project\\Books.xlsx"
     wb2 = xlrd.open_workbook(loc2)
     sheet2 = wb2.sheet_by_index(0)
     sheet2.cell_value(0, 0)
-    loc = "C:\SDP Project\Details.xlsx"
+    loc = "C:\\SDP Project\\Details.xlsx"
     wb = xlrd.open_workbook(loc)
     sheet = wb.sheet_by_index(0)
     sheet.cell_value(0, 0)
@@ -122,21 +121,33 @@ def issue(usern):
                                             if sheet.cell_value(i, 2) == usern:
                                                 num = i
                                             for j in range(4, sheet.ncols):
-                                                if sheetd.cell(i + 1, j + 1).value is not None:
-                                                    print(cnt, ".", sheet.cell_value(
-                                                        i, j), end="\n")
+                                                if sheetd.cell(
+                                                        i + 1, j + 1).value is not None:
+                                                    print(
+                                                        cnt, ".", sheet.cell_value(
+                                                            i, j), end="\n")
                                                     cnt = cnt + 1
                                                     retch = 'y'
-                                                    for i in range(sheet.ncols - 4):
+                                                    for i in range(
+                                                            sheet.ncols - 4):
                                                         ret = int(
                                                             input("Enter the number You want to return:"))
-                                                    for k in range(sheet2.nrows):
-                                                        for j in range(4, len(sheetd[num + 1])):
-                                                            if sheet.cell_value(num, 4 + ret - 1) != "":
+                                                    for k in range(
+                                                            sheet2.nrows):
+                                                        for j in range(4, len(
+                                                                sheetd[num + 1])):
+                                                            if sheet.cell_value(
+                                                                    num, 4 + ret - 1) != "":
                                                                 break
                                                             else:
                                                                 ret = ret + 1
-                                                            if sheet2.cell_value(k, 1) == sheet.cell_value(num, 4 + ret - 1):
+                                                            if sheet2.cell_value(
+                                                                    k,
+                                                                    1) == sheet.cell_value(
+                                                                    num,
+                                                                    4 +
+                                                                    ret -
+                                                                    1):
                                                                 c = sheetb.cell(
                                                                     k + 1, 6)
                                                                 c.value = sheet2.cell_value(
@@ -167,11 +178,15 @@ def issue(usern):
                                                                 cnt = 1
                                                                 print(
                                                                     "The books issued by you are:\n")
-                                                            for i in range(sheet.nrows):
-                                                                if sheet.cell_value(i, 2) == usern:
+                                                            for i in range(
+                                                                    sheet.nrows):
+                                                                if sheet.cell_value(
+                                                                        i, 2) == usern:
                                                                     num = i
-                                                                for j in range(4, sheet.ncols):
-                                                                    if sheetd.cell(i + 1, j + 1).value is not None:
+                                                                for j in range(
+                                                                        4, sheet.ncols):
+                                                                    if sheetd.cell(
+                                                                            i + 1, j + 1).value is not None:
                                                                         print(cnt, ".", sheet.cell_value(
                                                                             i, j), end="\n")
                                                                         cnt = cnt + 1

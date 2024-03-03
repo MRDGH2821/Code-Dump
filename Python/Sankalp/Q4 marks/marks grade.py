@@ -3,7 +3,7 @@ m2 = int(input("Enter marks of 2nd subject:"))
 m3 = int(input("Enter marks of 3rd subject:"))
 m4 = int(input("Enter marks of 4th subject:"))
 m5 = int(input("Enter marks of 5th subject:"))
-percentage = (m1+m2+m3+m4+m5)/5
+percentage = (m1 + m2 + m3 + m4 + m5) / 5
 print("Your percentage is:", percentage)
 if (percentage >= 90):
     print("Your grade is A+")

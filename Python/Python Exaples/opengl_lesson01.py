@@ -1,15 +1,12 @@
 """
  Show how to open a window for OpenGL graphics
-
  Sample Python/Pygame Programs
  Simpson College Computer Science
  http://programarcadegames.com/
  http://simpson.edu/computer-science/
-
  This program is based off the ideas in the excellent tutorials
  at http://nehe.gamedev.net/
 """
-
 import OpenGL.GL
 import OpenGL.GLU
 import pygame
@@ -18,7 +15,6 @@ import pygame
 def resize_gl_scene(size):
     height = size[1]
     width = size[0]
-
     OpenGL.GL.glViewport(0, 0, width, height)
     OpenGL.GL.glMatrixMode(OpenGL.GL.GL_PROJECTION)
     OpenGL.GL.glLoadIdentity()
@@ -45,37 +41,28 @@ def draw_gl_scene():
 
 def main():
     """ Main function for the game. """
-
     # Get Pygame ready
     pygame.init()
-
     # Set the width and height of the screen [width,height]
     size = (640, 480)
     video_flags = pygame.OPENGL | pygame.DOUBLEBUF
     pygame.display.set_mode(size, video_flags)
-
     # Create an OpenGL viewport
     resize_gl_scene(size)
     init_gl()
-
     # These are for calculating FPS
     frames = 0
     ticks = pygame.time.get_ticks()
-
     done = False
-
     while not done:
         event = pygame.event.poll()
         if event.type == pygame.QUIT:
             done = True
-
         draw_gl_scene()
         pygame.display.flip()
         frames = frames + 1
-
     total_ticks = pygame.time.get_ticks() - ticks
     print("Average of {:.1f} fps".format((frames * 1000) / total_ticks))
-
     pygame.quit()
 
 

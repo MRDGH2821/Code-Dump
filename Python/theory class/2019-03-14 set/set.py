@@ -5,21 +5,16 @@ c = {23, 4, 2, 32, 3, 423, 4, 234, 234, 131, 23, 124, 2, 35, 343, 1, 2, 3,
 print(d)
 d.pop()
 print(d)
-
-d.pop()
-print(d)
-
 d.pop()
 print(d)
 d.pop()
 print(d)
-
-print(d)
-print(d)
-
 d.pop()
 print(d)
-
+print(d)
+print(d)
+d.pop()
+print(d)
 print(c)
 print(d | c)
 print(d & c)

@@ -6,12 +6,10 @@ if a > b:
     print(a, ">", b)
 else:
     print(b, ">", a)
-
 if c == b:
     print("Ye toh equal hai !")
 else:
     print("Equal nahi hai yaar")
-
 if c >= b:
     print("C is >= B")
 else:

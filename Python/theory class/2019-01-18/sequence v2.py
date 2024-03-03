@@ -1,1 +1,1 @@
-print("AB", "CD"*3, "E")
+print("AB", "CD" * 3, "E")

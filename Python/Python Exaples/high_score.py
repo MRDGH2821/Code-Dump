@@ -1,6 +1,5 @@
 """
 Show how to use exceptions to save a high score for a game.
-
 Sample Python/Pygame Programs
 Simpson College Computer Science
 http://programarcadegames.com/
@@ -11,7 +10,6 @@ http://simpson.edu/computer-science/
 def get_high_score():
     # Default high score
     high_score = 0
-
     # Try to read the high score from a file
     try:
         high_score_file = open("high_score.txt", "r")
@@ -24,7 +22,6 @@ def get_high_score():
     except ValueError:
         # There's a file there, but we don't understand the number.
         print("I'm confused. Starting with no high score.")
-
     return high_score
 
 
@@ -43,7 +40,6 @@ def main():
     """ Main program is here. """
     # Get the high score
     high_score = get_high_score()
-
     # Get the score from the current game
     current_score = 0
     try:
@@ -52,7 +48,6 @@ def main():
     except ValueError:
         # Error, can't turn what they typed into a number
         print("I don't understand what you typed.")
-
     # See if we have a new high score
     if current_score > high_score:
         # We do! Save to disk

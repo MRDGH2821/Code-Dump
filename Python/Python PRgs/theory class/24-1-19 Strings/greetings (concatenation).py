@@ -1,2 +1,2 @@
 st = str(input("Your Beautiful name ? "))
-print("Good morning "+st+"!")
+print("Good morning " + st + "!")

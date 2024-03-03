@@ -63,16 +63,13 @@ def main():
     def change_limit(limit: int) -> str:
         Limit.set_limit(limit)
         return f"limit updated to {limit}"
-
     func_map = {
         "new": new_product,
         "del": del_product,
         "print": print_product,
         "limit": change_limit,
     }
-
     num_operations = int(input("Number of Operations: "))
-
     for i in range(num_operations):
         cmd, arg = input("> ").split()
         try:

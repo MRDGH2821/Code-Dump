@@ -2,11 +2,8 @@
 # Simpson College Computer Science
 # http://programarcadegames.com/
 # http://simpson.edu/computer-science/
-
 # Explanation video: http://youtu.be/sxFIxD8Gd3A
-
 plain_text = "This is a test. ABC abc"
-
 encrypted_text = ""
 for c in plain_text:
     x = ord(c)

@@ -6,7 +6,7 @@ print(random_numbers)
 def listmul(g):
     prd = 1
     for d in g:
-        prd = prd*d
+        prd = prd * d
     return prd
 
 

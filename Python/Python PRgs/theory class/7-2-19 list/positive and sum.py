@@ -5,6 +5,6 @@ sum = 0
 for x in a:
     if x >= 0:
         b.append(x)
-        sum = sum+x
+        sum = sum + x
 print("Positive list:", b)
 print("Sum of positives:", sum)

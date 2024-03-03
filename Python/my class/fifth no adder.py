@@ -2,5 +2,5 @@
 sum = 0
 x = 0
 for x in range(0, 501, 5):
-    sum = sum+x
+    sum = sum + x
 print("Sum =", sum)

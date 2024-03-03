@@ -7,5 +7,5 @@ ls = [randint(1, 1000) for x in range(10)]
 print(ls)  # printing the list
 sum = 0
 for y in ls:  # loop to calculate the sum
-    sum = sum+y
+    sum = sum + y
 print("Sum =", sum)  # printing sum

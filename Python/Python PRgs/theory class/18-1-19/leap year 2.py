@@ -1,4 +1,3 @@
-
 y = int(input("y=sentury year"))
 x = int(input("x=year"))
 if (x % 4 == 0 and y % 4 == 0):

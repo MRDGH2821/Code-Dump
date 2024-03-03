@@ -1,7 +1,5 @@
 # Division:C  Roll no.:42
-
 # Duplicates remover
-
 from random import randint
 # to initialise string with random numbers
 L1 = [randint(1, 50) for x in range(10)]
@@ -13,7 +11,6 @@ def dup(a, b):  # function to filter duplicates
     for x in a:
         if x not in b:  # if 'x' is not in 'b' then
             b.append(x)  # then append it in 'b'
-
     # sort the list
     b.sort()
     a.sort()

@@ -2,11 +2,8 @@
 # Simpson College Computer Science
 # http://programarcadegames.com/
 # http://simpson.edu/computer-science/
-
 # Explanation video: http://youtu.be/sxFIxD8Gd3A
-
 encrypted_text = "Uijt!jt!b!uftu/!BCD!bcd"
-
 plain_text = ""
 for c in encrypted_text:
     x = ord(c)

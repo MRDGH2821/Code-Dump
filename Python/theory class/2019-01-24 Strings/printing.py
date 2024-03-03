@@ -10,4 +10,4 @@ print(my_string[-1::-1])  # by Kaushal
 print(my_string[1:])  # phela chhod ke baaki sab
 print(my_string[::-1])  # reverse mai print karo
 mu = ' Punekar!'
-print(my_string+mu)
+print(my_string + mu)

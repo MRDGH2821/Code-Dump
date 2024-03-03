@@ -1,12 +1,9 @@
 import socket
-
 s = socket.socket()
 host = "127.0.0.1"
 port = 80
 s.bind((host, port))
-
 s.listen(5)
-
 while True:
     print("Waiting for connection")
     c, addr = s.accept()
@@ -16,5 +13,4 @@ while True:
     print(data_string)
     c.send(b'HTTP/1.1 200 OK\r\n\r\nHi')
     c.close()
-
 print("Done")

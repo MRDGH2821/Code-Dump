@@ -1,7 +1,5 @@
 # Division:C  Roll no.:42
-
 # To print calander of a month
-
 import calendar  # This module has all general calendar related functions
 # TextCalendar class is invoked from the module calendar
 cal = calendar.TextCalendar(calendar.SUNDAY)

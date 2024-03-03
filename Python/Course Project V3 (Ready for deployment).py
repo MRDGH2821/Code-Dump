@@ -1,6 +1,5 @@
 import os
 from time import sleep
-
 # Initialising variables
 name = ""
 m1 = 0
@@ -49,7 +48,8 @@ def readall():
                     c1[0], c1[1], c1[2], c1[3], c1[4]
                 )
             )
-        # This exception was to hide the error which comes up due to empty line inside the file.
+        # This exception was to hide the error which comes up due to empty line
+        # inside the file.
         except IndexError:
             continue
         except Exception:  # this statement does nothing special.It was used to hide when an exception occurs
@@ -88,12 +88,10 @@ def readspecific():
                     )
                 )
                 flag = 1  # flagging as data found
-
         except IndexError:
             # This error comes when a list of empty line is accessed using index slicing. Empty line create empty list
             # this error is hidden using continue statement.
             continue
-
         if flag == 0:
             print("Rollno not found")
             k.close()  # Closing file
@@ -126,21 +124,19 @@ def deletedata():
             else:
                 raise LookupError  # Raise LookupError because data wasn 't found
         except IndexError:
-            # This error comes when a list of empty line is accessed using index slicing. Empty line create empty list
+            # This error comes when a list of empty line is accessed using
+            # index slicing. Empty line create empty list
             continue  # this error is hidden using continue statement.
         except LookupError:
             flag = 0  # flagging as data not found
-
     # Flag checker to check if data deleted or not
     if flag == 0:
         print("Record not found")
     elif flag == 1:
         print("Record Deleted")
-
     # closing files
     data.close()
     l2.close()
-
     os.remove("student.txt ")  # deleting the old file
     # renaming temp file to original file name
     os.rename("temp.txt ", "student.txt ")
@@ -154,11 +150,9 @@ def backup():
     g = open("student bkp.txt ", "w ")  # Opening backup file
     # Copying contents of original file into backup file
     g.writelines(f.readlines())
-
     # closing files
     f.close()
     g.close()
-
     print("Backup Completed!")
     sleep(2)  # delays execution for 2 seconds
 
@@ -192,12 +186,11 @@ def menu():
         elif m == 4:
             deletedata()
         else:
-            # Raises ValueError as the input received is not from [-1,0,1,2,3,4]
+            # Raises ValueError as the input received is not from
+            # [-1,0,1,2,3,4]
             raise ValueError
-
     except ValueError:
         print("Invalid choice")
-
     except SystemExit:
         print("Program Closed ")
 

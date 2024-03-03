@@ -2,53 +2,46 @@
 # Simpson College Computer Science
 # http://programarcadegames.com/
 # http://simpson.edu/computer-science/
-
 import sys
-
 # Divide by zero
 try:
     x = 5 / 0
-except:
+except BaseException:
     print("Error dividing by zero")
     print(sys.exc_info()[0])
-
 # Invalid number conversion
 try:
     x = int("fred")
-except:
+except BaseException:
     print("Error converting fred to a number")
     print(sys.exc_info()[0])
-
 numberEntered = False
 while not numberEntered:
     numberString = input("Enter an integer: ")
     try:
         n = int(numberString)
         numberEntered = True
-    except:
+    except BaseException:
         print("Error, invalid integer")
-
 # Error opening file
 try:
     f = open('myfile.txt')
-except:
+except BaseException:
     print("Error opening file")
-
 # Multiple errors
 try:
     f = open('myfile.txt')
     s = f.readline()
     i = int(s.strip())
-    x = 101/i
+    x = 101 / i
 except IOError:
     print("I/O error")
 except ValueError:
     print("Could not convert data to an integer.")
 except ZeroDivisionError:
     print("Division by zero error")
-except:
+except BaseException:
     print("Unexpected error:", sys.exc_info()[0])
-
 # Generating exceptions
 
 

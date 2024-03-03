@@ -1,5 +1,5 @@
 def sqlist(j):
-    squared_values = [g**2 for g in range(j+1)]
+    squared_values = [g**2 for g in range(j + 1)]
     return squared_values
 
 

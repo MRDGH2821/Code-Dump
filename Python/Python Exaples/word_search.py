@@ -1,5 +1,4 @@
 import random
-
 # Create a grid filled with "." representing a blank
 
 
@@ -10,7 +9,6 @@ def createGrid():
         for column in range(50):
             grid[row].append(".")
     return grid
-
 # Print the grid to the screen
 
 
@@ -19,7 +17,6 @@ def printGrid(grid):
         for column in range(len(grid[row])):
             print(grid[row][column], end="")
         print()
-
 # Try to place the word. Return True if successful
 # False if it failed and we need to try again.
 
@@ -53,26 +50,22 @@ def tryToPlaceWord(grid, word):
     if (direction == 7):
         x_change = -1
         y_change = 0
-
     # Find the length and height of the grid
     height = len(grid)
     width = len(grid[0])
-
     # Create a random start point
     column = random.randrange(width)
     row = random.randrange(height)
-
     # Check to make sure  the word won't run off the edge of the grid.
     # If it does, return False. We failed.
     if (x_change < 0 and column < len(word)):
         return False
-    if (x_change > 0 and column > width-len(word)):
+    if (x_change > 0 and column > width - len(word)):
         return False
     if (y_change < 0 and row < len(word)):
         return False
-    if (y_change > 0 and row > height-len(word)):
+    if (y_change > 0 and row > height - len(word)):
         return False
-
     # Now check to make sure there isn't another letter in our way
     current_column = column
     current_row = row
@@ -84,7 +77,6 @@ def tryToPlaceWord(grid, word):
         else:
             # Oh! A different letter is already here. Fail.
             return False
-
     # Everything is good so far, actually place the letters.
     current_column = column
     current_row = row
@@ -93,21 +85,18 @@ def tryToPlaceWord(grid, word):
         current_row += y_change
         current_column += x_change
     return True
-
 # This just calls tryToPlaceWord until we succeed. It could
 # repeat forever if there is no possible place to put the word.
 
 
 def placeWord(grid, word):
     success = False
-
     while not (success):
         success = tryToPlaceWord(grid, word)
 
 
 # Create an empty grid
 grid = createGrid()
-
 # Place some words
 placeWord(grid, "pandabear")
 placeWord(grid, "fish")
@@ -121,6 +110,5 @@ placeWord(grid, "alligator")
 placeWord(grid, "ant")
 placeWord(grid, "camel")
 placeWord(grid, "dolphin")
-
 # Print it out
 printGrid(grid)

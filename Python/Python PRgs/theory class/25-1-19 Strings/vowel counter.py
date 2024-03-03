@@ -2,7 +2,7 @@ ste = str(input("Enter a string "))
 ct = 0
 for x in ste:
     if x == 'a' or 'e' or 'i' or 'o' or 'u' or 'A' or 'E' or 'I' or 'O' or 'U':
-        ct = ct+1
+        ct = ct + 1
 print("Total vowels = ", ct)
 print("a= ", ste.count('a', 0, len(ste)))
 print("e= ", ste.count('e', 0, len(ste)))
