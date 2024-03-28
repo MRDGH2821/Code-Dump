@@ -1,4 +1,3 @@
-thislist=["apple","banana","cherry"]
-thislist.clear ()
+thislist = ["apple", "banana", "cherry"]
+thislist.clear()
 print(thislist)
-

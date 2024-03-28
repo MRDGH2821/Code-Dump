@@ -1,25 +1,22 @@
 package ifelse;
 import java.util.Scanner;
-public class ifelsevala
-{
-public static void main(String[] args)
-{
-  /*	Scanner input=new Scanner(System.in);
+public class ifelsevala {
+    public static void main(String[] args) {
+        /*	Scanner input=new Scanner(System.in);
      }
      }*/
-  Scanner input = new Scanner(System.in);
-  int arr[] = new int[10];
-  int sm = 0;
+        Scanner input = new Scanner(System. in);
+        int arr[]     = new int[10];
+        int sm        = 0;
 
-  System.out.println("Enter 10 numbers");
-  for (int k1 : arr)
-    {
-      arr[k1] = input.nextInt();
+        System.out.println("Enter 10 numbers");
+        for (int k1 : arr) {
+            arr[k1] = input.nextInt();
 
-      sm = sm + arr[k1];
+            sm      = sm + arr[k1];
+        }
+        System.out.println(sm);
     }
-  System.out.println(sm);
-}
 }
 /*int sum=0,r;
    }
@@ -62,5 +59,3 @@ public static void main(String[] args)
    }
 
    }*/
-
-
