@@ -1,8 +1,0 @@
-package Day3;
-
-public class Inheritance {
-System.out.println("This is Inheritance class");
-}
-
-class subclass extends Inheritance
-

@@ -1,6 +1,0 @@
-
-public interface Animals implements Animal, implements maincheej
-{
-maincheej m=new maincheej();
-m.main();
-}
